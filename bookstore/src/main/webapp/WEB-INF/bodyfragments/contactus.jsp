@@ -1,6 +1,6 @@
 <%@ page isELIgnored="false" %>
 
-Contact Us: Book Store
+<h1>Contact Us: Book Store</h1>
 <br>
 Address: ${address}
 <br>
