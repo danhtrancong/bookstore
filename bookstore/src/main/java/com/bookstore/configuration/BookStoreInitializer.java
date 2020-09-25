@@ -6,12 +6,12 @@ public class BookStoreInitializer extends AbstractAnnotationConfigDispatcherServ
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class[] { BookStoreConfiguration.class };
+		return new Class[] { AppContext.class };
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return null;
+		return new Class[] { WebMvcConfig.class };
 	}
 
 	@Override
