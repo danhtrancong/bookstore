@@ -5,24 +5,24 @@
 <tiles-definitions>
 
 	<!-- Base Define -->
-	<definition name="base.definition" template="/WEB-INF/layouts/classic.jsp">
+	<definition name="bookstore.definition" template="/WEB-INF/layouts/classic.jsp">
 		<put-attribute name="title" value="" />
-		<put-attribute name="header" value="/WEB-INF/basefragments/header.jsp" />
-		<put-attribute name="menu" value="/WEB-INF/basefragments/menu.jsp" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="navigation" value="/WEB-INF/template/navigation.jsp" />
 		<put-attribute name="body" value="" />
-		<put-attribute name="footer" value="/WEB-INF/basefragments/footer.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/template/footer.jsp" />
 	</definition>
 
 	<!-- Home Page -->
-	<definition name="homePage" extends="base.definition">
-		<put-attribute name="title" value="Home Page" />
-		<put-attribute name="body" value="/WEB-INF/bodyfragments/home.jsp" />
+	<definition name="homePage" extends="bookstore.definition">
+		<put-attribute name="title" value="Ngôi Nhà Sách" />
+		<put-attribute name="body" value="/WEB-INF/view/home.jsp" />
 	</definition>
 
 	<!-- ContactUs Page -->
-	<definition name="contactusPage" extends="base.definition">
-		<put-attribute name="title" value="Contact Us" />
-		<put-attribute name="body" value="/WEB-INF/bodyfragments/contactus.jsp" />
+	<definition name="contactusPage" extends="bookstore.definition">
+		<put-attribute name="title" value="Liên Hệ" />
+		<put-attribute name="body" value="/WEB-INF/view/contactus.jsp" />
 	</definition>
 	
 </tiles-definitions>

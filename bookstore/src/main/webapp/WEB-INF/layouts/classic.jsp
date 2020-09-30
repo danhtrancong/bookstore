@@ -9,17 +9,9 @@
 </head>
 
 <body>
-	<table width="100%">
-		<tr>
-			<td colspan="2"><tiles:insertAttribute name="header" /></td>
-		</tr>
-		<tr>
-			<td width="20%" nowrap="nowrap"><tiles:insertAttribute name="menu" /></td>
-			<td width="80%"><tiles:insertAttribute name="body" /></td>
-		</tr>
-		<tr>
-			<td colspan="2"><tiles:insertAttribute name="footer" /></td>
-		</tr>
-	</table>
+	<div><tiles:insertAttribute name="header" /></div>
+	<div><tiles:insertAttribute name="navigation" /></div>
+	<div><tiles:insertAttribute name="body" /></div>
+	<div><tiles:insertAttribute name="footer" /></div>
 </body>
 </html>
