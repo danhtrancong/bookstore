@@ -4,8 +4,9 @@
 
 <html>
 <head>
-<title><tiles:getAsString name="title" /></title>
-<link href="<c:url value='/css/style.css' />" rel="stylesheet"></link>
+	<title><tiles:getAsString name="title" /></title>
+	<link href="<c:url value='/css/bootstrap.min.css' />" rel="stylesheet"></link>
+	<link href="<c:url value='/css/style.css' />" rel="stylesheet"></link>
 </head>
 
 <body>
