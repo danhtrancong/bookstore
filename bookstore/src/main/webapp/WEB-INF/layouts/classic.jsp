@@ -5,8 +5,15 @@
 <html>
 <head>
 	<title><tiles:getAsString name="title" /></title>
-	<link href="<c:url value='/css/bootstrap.min.css' />" rel="stylesheet"></link>
-	<link href="<c:url value='/css/style.css' />" rel="stylesheet"></link>
+	<link href="<c:url value="/css/bootstrap-4.4.1/bootstrap.min.css" />" rel="stylesheet">
+	<link href="<c:url value="/css/bootstrap-4.4.1/bootstrap-glyphicons.css" />" rel="stylesheet">
+	<link href="<c:url value="/css/jquery-ui-1.12.1.css" />" rel="stylesheet">
+	<link href="<c:url value="/css/style.css" />" rel="stylesheet">
+
+	<script src="<c:url value="/js/jquery-1.12.4.js" />"></script>
+	<script src="<c:url value="/css/bootstrap-4.4.1/popper.min.js" />"></script>
+	<script src="<c:url value="/css/bootstrap-4.4.1/bootstrap.min.js" />"></script>
+	<script src="<c:url value="/js/jquery-ui-1.12.1.js" />"></script>
 </head>
 
 <body>

@@ -2,6 +2,11 @@ body {
 	margin: 0px;
 }
 
+.row {
+	padding: 0px;
+	margin: 0px;
+}
+
 .header {
 	background-color: #C0C0C0;
 	height: 150px;
