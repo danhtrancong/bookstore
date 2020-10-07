@@ -13,13 +13,57 @@ body {
 }
 
 .header .contact-information {
-	background-color: #FFFFFF;
+	background-color: #ff8000;
 	height: 35px;
 }
 
 .header .product-search {
-	background-color: #FF0000;
+	background-color: #FFFFFF;
 	height: 115px;
+}
+
+.header .product-search img {
+	margin-top: 7.5px;
+	height: 100px;
+}
+
+.product-search .search-content {
+	height: 50px;
+	margin-top: 30px;
+	border: 1px solid #dddddd;
+}
+
+.search-content input {
+	height: 100%;
+	width: 100%;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	color: #AAAAAA;
+}
+
+.search-content .vertical {
+	border-left: 1px solid #dddddd;
+	height: 50%;
+	margin-top: 10px;
+	padding: 0px;
+	max-width: 0px;
+}
+
+.search-content .col-md-8 {
+	margin-right: 71.5px;
+}
+
+.search-content .icon-search {
+	background-color: red;
+}
+
+.search-content .col-md-8 {
+	margin-right: 71.5px;
+}
+
+.search-content .icon-search {
+	background-color: red;
 }
 
 .navigation {
