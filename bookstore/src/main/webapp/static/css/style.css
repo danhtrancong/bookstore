@@ -63,8 +63,26 @@ body {
 }
 
 .search-content .icon-search {
-	background-color: red;
+	background-color: white;
 }
+
+.icon-search .button-search {
+	background-color: #e7ab3c;
+	border: 1px solid #e7ab3c;
+}
+
+.search {
+	padding: 15.20px;
+	color: white;
+}
+
+#dropdownMenuButton{
+color: black;
+    background-color: white;
+    padding: 10.25px;
+    border: 0px;
+    font-size: 17px;
+    padding-right: 18.25px;}
 
 .navigation {
 	background-color: #00FF00;
