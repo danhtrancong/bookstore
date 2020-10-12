@@ -1,77 +1,221 @@
+html,
 body {
-	margin: 0px;
-}
-
-.row {
-	padding: 0px;
-	margin: 0px;
-}
-
-.header {
-	background-color: #C0C0C0;
-	height: 150px;
-}
-
-.header .contact-information {
-	background-color: #ff8000;
-	height: 35px;
-}
-
-.header .product-search {
-	background-color: #FFFFFF;
-	height: 115px;
-}
-
-.header .product-search img {
-	margin-top: 7.5px;
-	height: 100px;
-}
-
-.product-search .search-content {
-	height: 50px;
-	margin-top: 30px;
-	border: 1px solid #dddddd;
-}
-
-.search-content input {
 	height: 100%;
-	width: 100%;
-	border: none;
-	outline: none;
+	font-family: "Muli", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	color: #111111;
+	font-weight: 400;
+	font-family: "Muli", sans-serif;
+}
+
+h1 {
+	font-size: 70px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
 	font-size: 18px;
-	color: #AAAAAA;
 }
 
-.search-content .vertical {
-	border-left: 1px solid #dddddd;
-	height: 50%;
-	margin-top: 10px;
-	padding: 0px;
-	max-width: 0px;
+h6 {
+	font-size: 16px;
 }
 
-.search-content .col-md-8 {
-	margin-right: 71.5px;
+p {
+	font-size: 16px;
+	font-family: "Muli", sans-serif;
+	color: #636363;
+	font-weight: 400;
+	line-height: 26px;
+	margin: 0 0 15px 0;
 }
 
-.search-content .icon-search {
-	background-color: red;
+img {
+	max-width: 100%;
 }
 
-.search-content .col-md-8 {
-	margin-right: 71.5px;
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+	outline: none;
 }
 
-.search-content .icon-search {
-	background-color: red;
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: none;
+	color: #fff;
 }
 
-.navigation {
-	background-color: #00FF00;
-	height: 35px;
+ul,
+ol {
+	padding: 0;
+	margin: 0;
 }
 
-.body {
-	background-color: #0000FF;
-	height: 35px;
+
+.ht-right .lan-selector {
+	max-width: 142px;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+}
+
+.ht-right .lan-selector .ddcommon {
+	max-width: 142px;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	outline: none;
+	cursor: pointer;
+	padding: 0 20px;
+}
+
+.ht-right .lan-selector .ddcommon .ddTitle .ddTitleText img {
+	padding-right: 5px;
+}
+
+.ht-right .lan-selector .ddcommon .ddTitle .ddTitleText span {
+	font-size: 14px;
+	color: #252525;
+}
+
+.ht-right .lan-selector .ddcommon .ddTitle .ddArrow:before {
+	content: "3";
+	font-family: "ElegantIcons";
+	font-size: 14px;
+	color: #636363;
+	float: right;
+	position: relative;
+	right: 0;
+	line-height: 26px;
+}
+
+.ht-right .lan-selector .ddcommon .ddChild {
+	background: #fff;
+	max-width: 142px;
+	width: 100%;
+	position: relative;
+	left: 0;
+}
+
+.ht-right .lan-selector .ddcommon .ddChild ul {
+	width: 100%;
+	max-width: 142px;
+}
+
+.ht-right .lan-selector .ddcommon .ddChild ul li {
+	line-height: 23px;
+	padding: 0px 10px;
+	list-style: none;
+}
+
+.ht-right .lan-selector .ddcommon .ddChild ul li img {
+	padding-right: 10px;
+}
+
+.ht-right .lan-selector .ddcommon .ddChild ul li span {
+	font-size: 13px;
+	color: #000;
+	letter-spacing: 0.325px;
+}
+
+.header-top {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.header-top .ht-left {
+	float: left;
+}
+
+.header-top .ht-left .mail-service {
+	font-size: 16px;
+	color: #252525;
+	float: left;
+	border-right: 1px solid #E5E5E5;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 20px;
+}
+
+.header-top .ht-left .mail-service i {
+	margin-right: 5px;
+}
+
+.header-top .ht-left .phone-service {
+	float: right;
+	font-size: 14px;
+	color: #252525;
+	line-height: 27px;
+	padding-top: 15px;
+	padding-bottom: 12px;
+	padding-left: 20px;
+}
+
+.header-top .ht-left .phone-service i {
+	margin-right: 5px;
+}
+
+.header-top .ht-right {
+	float: right;
+}
+
+.header-top .ht-right .login-panel {
+	float: right;
+	font-size: 14px;
+	color: #252525;
+	display: inline-block;
+	padding-left: 20px;
+	border-left: 1px solid #e5e5e5;
+	padding-top: 18px;
+	padding-bottom: 15px;
+}
+
+.header-top .ht-right .login-panel i {
+	margin-right: 8px;
+}
+
+.header-top .ht-right .lan-selector {
+	float: right;
+	margin-top: 15px;
+	margin-bottom: 13px;
+}
+
+.header-top .ht-right .top-social {
+	float: right;
+	padding-right: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-right: 1px solid #e5e5e5;
+}
+
+.header-top .ht-right .top-social a {
+	color: #252525;
+	font-size: 14px;
+	display: inline-block;
+	margin-left: 15px;
 }

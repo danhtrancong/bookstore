@@ -1,25 +1,36 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<div class="header">
-	<div class="contact-information row">
-		<div class="col-md-3">email</div>
-		<div class="col-md-5">contact</div>
-		<div class="col-md-2">Language</div>
-		<div class="col-md-2">profile</div>
-	</div>
-	
-	<div class="product-search row">
-		<div class="col-md-2" >
-			<img src="static/asset/logo.png" />
-		</div>
-				
-		<div class="col-md-8"> 
-			<div  class="search-content row">
-				<div class="col-md-2">danh muc</div>
-				<div class="col-md-1 vertical"></div>
-				<div class="col-md-8"><input type="text" placeholder="Tìm kiếm sản phẩm mong muốn"/></div>
-				<div class="col-md-1 icon-search">icon search</div>
-			</div>
-		</div>
-		<div class="col-md-2" > like / save and favorite</div>
-	</div>
+
+<div class="header-section">
+        <div class="header-top">
+            <div class="container">
+                <div class="ht-left">
+                    <div class="mail-service">
+                        <i class=" fa fa-envelope"></i>
+                        trancongdanh@gmail.com
+                    </div>
+                    <div class="phone-service">
+                        <i class=" fa fa-phone"></i>
+                        +84.776.123.456
+                    </div>
+                </div>
+                <div class="ht-right">
+                    <a href="#" class="login-panel"><i class="fa fa-user"></i>Login</a>
+                        <div class="lan-selector">
+                        <select class="language_drop" name="countries" id="countries" style="width:280px;">
+                            <option value='yu' data-image="img/flag-2.jpg" data-imagecss="flag yu"
+                            data-title="Vietnamese">Vn </option>
+                            <option value='yt' data-image="img/flag-1.jpg" data-imagecss="flag yt"
+                                data-title="English">English</option>
+                           
+                        </select>
+                    </div>
+                    <div class="top-social">
+                        <a href="#"><i class="ti-facebook"></i></a>
+                        <a href="#"><i class="ti-twitter-alt"></i></a>
+                        <a href="#"><i class="ti-linkedin"></i></a>
+                        <a href="#"><i class="ti-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+       </div>
 </div>
