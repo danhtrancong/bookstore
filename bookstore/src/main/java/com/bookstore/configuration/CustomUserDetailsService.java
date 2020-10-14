@@ -1,4 +1,4 @@
-package com.bookstore.security;
+package com.bookstore.configuration;
 
 import java.util.ArrayList;
 import java.util.List;

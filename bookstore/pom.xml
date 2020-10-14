@@ -11,7 +11,7 @@
 		<springframework.version>4.2.5.RELEASE</springframework.version>
         <springsecurity.version>4.0.4.RELEASE</springsecurity.version>
         <hibernate.version>4.3.11.Final</hibernate.version>
-        <mysql.connector.version>5.1.31</mysql.connector.version>
+        <mysql.connector.version>8.0.20</mysql.connector.version>
 	</properties>
 
 	<dependencies>
@@ -145,10 +145,42 @@
             <artifactId>tiles-jsp</artifactId>
             <version>3.0.7</version>
         </dependency>
-         
+        
+        <!-- Tiles tiles-request-api -->
+        <dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-request-api</artifactId>
+			<version>1.0.6</version>
+		</dependency>
+		
+
+		
     </dependencies>
 
-	<build>
-		<finalName>bookstore</finalName>
+<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+			        <groupId>org.apache.maven.plugins</groupId>
+			        <artifactId>maven-compiler-plugin</artifactId>
+			        <version>3.2</version>
+			        <configuration>
+			            <source>1.7</source>
+			            <target>1.7</target>
+			        </configuration>
+			    </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.4</version>
+					<configuration>
+						<warSourceDirectory>src/main/webapp</warSourceDirectory>
+						<warName>bookstore</warName>
+						<failOnMissingWebXml>false</failOnMissingWebXml>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<finalName>Bookstore</finalName>
 	</build>
 </project>

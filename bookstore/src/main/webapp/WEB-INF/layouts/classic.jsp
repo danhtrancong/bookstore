@@ -14,6 +14,7 @@
 	<link href="<c:url value="/css/style.css" />" rel="stylesheet" type="text/css">
 	<link href="<c:url value="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" />" rel="stylesheet">
 
+   <link href="<c:url value="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" />" rel="stylesheet">
     
     <link href="<c:url value="/css/bootstrap-4.4.1/font-awesome.min.css"  />" rel="stylesheet" type="text/css">
     <link href="<c:url value="/css/bootstrap-4.4.1/themify-icons.css"  />" rel="stylesheet" type="text/css">
@@ -22,7 +23,13 @@
     <link href="<c:url value="/css/bootstrap-4.4.1/nice-select.css"  />" rel="stylesheet" type="text/css">
     <link href="<c:url value="/css/bootstrap-4.4.1/slicknav.min.css"  />" rel="stylesheet" type="text/css">
     
+    
+    <link href="<c:url value="/css/bootstrap.css.css"  />" rel="stylesheet" type="text/css">
+    <link href="<c:url value="/css/app.css"  />" rel="stylesheet" type="text/css">
+   
 	
+        
+        
 	<script src="<c:url value="/js/jquery-3.3.1.min.js"/>"></script>
     <script src="<c:url value="/js/bootstrap.min.js"/>"></script>
     <script src="<c:url value="/js/jquery-ui.min.js"/>"></script>

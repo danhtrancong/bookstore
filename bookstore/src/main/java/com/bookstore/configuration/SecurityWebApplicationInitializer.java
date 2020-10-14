@@ -1,4 +1,4 @@
-package com.bookstore.security;
+package com.bookstore.configuration;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

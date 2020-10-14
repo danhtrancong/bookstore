@@ -22,7 +22,37 @@
 	<!-- ContactUs Page -->
 	<definition name="contactusPage" extends="bookstore.definition">
 		<put-attribute name="title" value="Liên Hệ" />
-		<put-attribute name="body" value="/WEB-INF/view/contactus.jsp" />
+		<put-attribute name="body" value="/WEB-INF/template/contactus.jsp" />
+	</definition>
+	
+	<!-- Login Page -->
+	<definition name="login" extends="bookstore.definition">
+		<put-attribute name="title" value="Đăng Nhập" />
+		<put-attribute name="body" value="/WEB-INF/template/login.jsp" />
+	</definition>
+	<!-- accessDenied Page -->
+		<definition name="accessDenied" extends="bookstore.definition">
+		<put-attribute name="title" value="Access Denied" />
+		<put-attribute name="body" value="/WEB-INF/template/accessDenied.jsp" />
+	</definition>
+	
+		<definition name="registrationsuccess" extends="bookstore.definition">
+		<put-attribute name="title" value="Đăng Ký Thành Công" />
+		<put-attribute name="body" value="/WEB-INF/template/registrationsuccess.jsp" />
+	</definition>	
+	
+	<definition name="authheader" extends="bookstore.definition">
+		<put-attribute name="title" value="Authheader" />
+		<put-attribute name="body" value="/WEB-INF/template/authheader.jsp" />
+	</definition>
+		<definition name="userslist" extends="bookstore.definition">
+		<put-attribute name="title" value="Userslist" />
+		<put-attribute name="body" value="/WEB-INF/template/userslist.jsp" />
+	</definition>
+	
+		<definition name="newuser" extends="bookstore.definition">
+		<put-attribute name="title" value="New User" />
+		<put-attribute name="body" value="/WEB-INF/template/registration.jsp" />
 	</definition>
 	
 </tiles-definitions>
