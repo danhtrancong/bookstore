@@ -1,16 +1,19 @@
 package com.bookstore.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-
-import com.bookstore.entity.enumtype.UserType;
 
 @Entity
 @Table(name = "user")
-public class User extends BaseEntity {
+public class UserEntity extends BaseEntity {
 
 	@Column(name = "full_name")
 	private String fullName;
@@ -24,9 +27,10 @@ public class User extends BaseEntity {
 	@Column(name = "password")
 	private String password;
 
-	@Enumerated(EnumType.STRING)
-	@Column(name = "user_type")
-	private UserType userType;
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "user_role", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = {
+			@JoinColumn(name = "role_id") })
+	private Set<RoleEntity> roles = new HashSet<RoleEntity>();
 
 	public String getFullName() {
 		return fullName;
@@ -60,4 +64,11 @@ public class User extends BaseEntity {
 		this.password = password;
 	}
 
+	public Set<RoleEntity> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Set<RoleEntity> roles) {
+		this.roles = roles;
+	}
 }
