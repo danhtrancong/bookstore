@@ -1,48 +1,49 @@
 package com.bookstore.dao;
 
-import java.io.Serializable;
-import java.lang.reflect.ParameterizedType;
+import org.springframework.transaction.annotation.Transactional;
 
-import org.hibernate.Criteria;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import java.util.List;
 
-public abstract class AbstractDao<PK extends Serializable, T> {
+public abstract class AbstractDao<T> implements GenericDao<T> {
 
-	private final Class<T> persistentClass;
+    @PersistenceContext
+    protected EntityManager em;
 
-	@SuppressWarnings("unchecked")
-	public AbstractDao() {
-		this.persistentClass = (Class<T>) ((ParameterizedType) this.getClass().getGenericSuperclass())
-				.getActualTypeArguments()[1];
-	}
+    private Class<T> clazz;
 
-	@Autowired
-	private SessionFactory sessionFactory;
+    public void setClazz(Class<T> clazz) {
+        this.clazz = clazz;
+    }
 
-	protected Session getSession() {
-		return sessionFactory.getCurrentSession();
-	}
+    public T findOne(long id) {
+        return em.find(clazz, id);
+    }
 
-	@SuppressWarnings("unchecked")
-	public T getByKey(PK key) {
-		return (T) getSession().get(persistentClass, key);
-	}
+    public List<T> findAll() {
+        return em.createQuery("from " + clazz.getName()).getResultList();
+    }
 
-	public void persist(T entity) {
-		getSession().persist(entity);
-	}
+    @Transactional
+    public T create(T entity) {
+        em.persist(entity);
+        return entity;
+    }
 
-	public void update(T entity) {
-		getSession().update(entity);
-	}
+    @Transactional
+    public T update(T entity) {
+        return (T) em.merge(entity);
+    }
 
-	public void delete(T entity) {
-		getSession().delete(entity);
-	}
+    @Transactional
+    public void delete(T entity) {
+        em.remove(entity);
+    }
 
-	protected Criteria createEntityCriteria() {
-		return getSession().createCriteria(persistentClass);
-	}
+    @Transactional
+    public void deleteById(long entityId) {
+        T entity = findOne(entityId);
+        delete(entity);
+    }
 }
