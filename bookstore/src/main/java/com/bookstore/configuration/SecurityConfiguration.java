@@ -13,9 +13,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices;
-import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
 @Configuration
 @EnableWebSecurity
@@ -45,25 +42,19 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/home", "/list")
-				.access("hasRole('USER') or hasRole('ADMIN') or hasRole('DBA')")
-				.antMatchers("/newuser/**", "/delete-user-*").access("hasRole('ADMIN')").antMatchers("/edit-user-*")
-				.access("hasRole('ADMIN') or hasRole('DBA')").and().formLogin().loginPage("/login")
-				.loginProcessingUrl("/api-login").usernameParameter("username").passwordParameter("password").and()
-				.rememberMe().rememberMeParameter("remember-me")
+		http.authorizeRequests()
+				.antMatchers("/home", "/list")
+				.access("hasRole('ADMIN') or hasRole('EMPLOYEE') or hasRole('CUSTOMER')")
+				.antMatchers("/edit/**").access("hasRole('ADMIN')")
+				.and().formLogin().loginPage("/login").loginProcessingUrl("/api-login").usernameParameter("username").passwordParameter("password")
 				.and().csrf().and().exceptionHandling().accessDeniedPage("/access_denied");
-	}
-
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
 	}
 
 	@Bean
 	public DaoAuthenticationProvider authenticationProvider() {
 		DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
 		authenticationProvider.setUserDetailsService(userDetailsService);
-		authenticationProvider.setPasswordEncoder(passwordEncoder());
+		authenticationProvider.setPasswordEncoder(new BCryptPasswordEncoder());
 		return authenticationProvider;
 	}
 

@@ -31,4 +31,10 @@
 		<put-attribute name="body" value="/WEB-INF/bodyfragments/login.jsp" />
 	</definition>
 	
+	<!-- ContactUs Page -->
+	<definition name="editPage" extends="base.definition">
+		<put-attribute name="title" value="edit page" />
+		<put-attribute name="body" value="/WEB-INF/bodyfragments/edit.jsp" />
+	</definition>
+	
 </tiles-definitions>

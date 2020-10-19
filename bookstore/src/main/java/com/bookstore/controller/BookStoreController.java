@@ -23,4 +23,9 @@ public class BookStoreController {
 		
 		return "contactusPage";
 	}
+	
+	@RequestMapping(value = { "/edit" }, method = RequestMethod.GET)
+	public String showEditProductView(Model model) {		
+		return "editPage";
+	}
 }

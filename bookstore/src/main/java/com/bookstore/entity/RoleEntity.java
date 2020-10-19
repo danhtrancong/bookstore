@@ -1,6 +1,8 @@
 package com.bookstore.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Table;
 
 import com.bookstore.entity.enumtype.UserType;
@@ -9,6 +11,7 @@ import com.bookstore.entity.enumtype.UserType;
 @Table(name = "role")
 public class RoleEntity extends BaseEntity{
 
+	@Enumerated(EnumType.STRING)
 	private UserType name;
 
 	public UserType getName() {
