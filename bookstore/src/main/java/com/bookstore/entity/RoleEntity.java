@@ -7,19 +7,9 @@ import com.bookstore.entity.enumtype.UserType;
 
 @Entity
 @Table(name = "role")
-public class RoleEntity {
-
-	private Long id;
+public class RoleEntity extends BaseEntity{
 
 	private UserType name;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public UserType getName() {
 		return name;

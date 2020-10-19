@@ -1,10 +1,11 @@
 package com.bookstore.dao;
 
-import org.springframework.transaction.annotation.Transactional;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.List;
+
+import org.springframework.transaction.annotation.Transactional;
 
 public abstract class AbstractDao<T> implements GenericDao<T> {
 

@@ -33,8 +33,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	UserDetailsService userDetailsService;
 
 	// TODO : tai sao khong qualifier ?
-	@Autowired
-	PersistentTokenRepository tokenRepository;
+//	@Autowired
+//	PersistentTokenRepository tokenRepository;
 
 	// khong hieu
 	@Autowired
@@ -45,16 +45,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests()
-		.antMatchers("/home", "/list").access("hasRole('USER') or hasRole('ADMIN') or hasRole('DBA')")
-		.antMatchers("/newuser/**", "/delete-user-*").access("hasRole('ADMIN')")
-		.antMatchers("/edit-user-*").access("hasRole('ADMIN') or hasRole('DBA')")
-		.and()
-		.formLogin().loginPage("/login").loginProcessingUrl("/api-login").usernameParameter("username").passwordParameter("password")
-		.and()
-		.rememberMe().rememberMeParameter("remember-me")
-		.tokenRepository(tokenRepository).tokenValiditySeconds(86400)
-		.and().csrf().and().exceptionHandling().accessDeniedPage("/access_denied");
+		http.authorizeRequests().antMatchers("/home", "/list")
+				.access("hasRole('USER') or hasRole('ADMIN') or hasRole('DBA')")
+				.antMatchers("/newuser/**", "/delete-user-*").access("hasRole('ADMIN')").antMatchers("/edit-user-*")
+				.access("hasRole('ADMIN') or hasRole('DBA')").and().formLogin().loginPage("/login")
+				.loginProcessingUrl("/api-login").usernameParameter("username").passwordParameter("password").and()
+				.rememberMe().rememberMeParameter("remember-me")
+				.and().csrf().and().exceptionHandling().accessDeniedPage("/access_denied");
 	}
 
 	@Bean
@@ -62,23 +59,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		return new BCryptPasswordEncoder();
 	}
 
-	 @Bean
-	    public DaoAuthenticationProvider authenticationProvider() {
-	        DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
-	        authenticationProvider.setUserDetailsService(userDetailsService);
-	        authenticationProvider.setPasswordEncoder(passwordEncoder());
-	        return authenticationProvider;
-	    }
-	 
-	    @Bean
-	    public PersistentTokenBasedRememberMeServices getPersistentTokenBasedRememberMeServices() {
-	        PersistentTokenBasedRememberMeServices tokenBasedservice = new PersistentTokenBasedRememberMeServices(
-	                "remember-me", userDetailsService, tokenRepository);
-	        return tokenBasedservice;
-	    }
-	 
-	    @Bean
-	    public AuthenticationTrustResolver getAuthenticationTrustResolver() {
-	        return new AuthenticationTrustResolverImpl();
-	    }
+	@Bean
+	public DaoAuthenticationProvider authenticationProvider() {
+		DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
+		authenticationProvider.setUserDetailsService(userDetailsService);
+		authenticationProvider.setPasswordEncoder(passwordEncoder());
+		return authenticationProvider;
+	}
+
+	@Bean
+	public AuthenticationTrustResolver getAuthenticationTrustResolver() {
+		return new AuthenticationTrustResolverImpl();
+	}
 }
