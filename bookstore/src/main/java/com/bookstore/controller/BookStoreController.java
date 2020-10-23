@@ -28,4 +28,9 @@ public class BookStoreController {
 	public String showEditProductView(Model model) {		
 		return "editPage";
 	}
+	
+	@RequestMapping(value = { "/access-denied" }, method = RequestMethod.GET)
+	public String showAccessDeniedView(Model model) {		
+		return "accessdeniedPage";
+	}
 }

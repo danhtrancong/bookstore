@@ -29,11 +29,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Qualifier("customUserDetailsService")
 	UserDetailsService userDetailsService;
 
-	// TODO : tai sao khong qualifier ?
-//	@Autowired
-//	PersistentTokenRepository tokenRepository;
-
-	// khong hieu
 	@Autowired
 	public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailsService);
@@ -46,8 +41,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.antMatchers("/home", "/list")
 				.access("hasRole('ADMIN') or hasRole('EMPLOYEE') or hasRole('CUSTOMER')")
 				.antMatchers("/edit/**").access("hasRole('ADMIN')")
-				.and().formLogin().loginPage("/login").loginProcessingUrl("/api-login").usernameParameter("username").passwordParameter("password")
-				.and().csrf().and().exceptionHandling().accessDeniedPage("/access_denied");
+				.and().formLogin().loginPage("/login").loginProcessingUrl("/api-login").defaultSuccessUrl("/home", true).usernameParameter("username").passwordParameter("password")
+				.and().csrf().and().exceptionHandling().accessDeniedPage("/access-denied");
 	}
 
 	@Bean
