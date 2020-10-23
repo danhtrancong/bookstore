@@ -1,10 +1,13 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <div class="header">
 	<div class="contact-information row">
-		<div class="col-md-3">email</div>
-		<div class="col-md-5">contact</div>
-		<div class="col-md-2">Language</div>
-		<div class="col-md-2">profile</div>
+		<div class="col-md-3 border-right">
+		<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+		email
+		</div>
+		<div class="col-md-5 border-right">contact</div>
+		<div class="col-md-2 border-right">Language</div>
+		<div class="col-md-2 border-right">profile</div>
 	</div>
 
 	<div class="product-search row">

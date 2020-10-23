@@ -13,8 +13,14 @@ body {
 }
 
 .header .contact-information {
-	background-color: #ff8000;
-	height: 35px;
+	background-color: white;
+	height: 50px;
+	border: 1px solid #dddddd;
+}
+
+.header .border-right {
+	border-right: 1px solid #dddddd;
+	padding-top: 12px;
 }
 
 .header .product-search {
@@ -76,13 +82,14 @@ body {
 	color: white;
 }
 
-#dropdownMenuButton{
-color: black;
-    background-color: white;
-    padding: 10.25px;
-    border: 0px;
-    font-size: 17px;
-    padding-right: 18.25px;}
+#dropdownMenuButton {
+	color: black;
+	background-color: white;
+	padding: 10.25px;
+	border: 0px;
+	font-size: 17px;
+	padding-right: 18.25px;
+}
 
 .navigation {
 	background-color: #00FF00;
