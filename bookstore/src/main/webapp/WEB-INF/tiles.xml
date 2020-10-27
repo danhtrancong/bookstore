@@ -25,4 +25,10 @@
 		<put-attribute name="body" value="/WEB-INF/view/contactus.jsp" />
 	</definition>
 	
+	<!-- Login Page -->
+	<definition name="loginPage" extends="bookstore.definition">
+		<put-attribute name="title" value="login" />
+		<put-attribute name="body" value="/WEB-INF/view/login.jsp" />
+	</definition>
+	
 </tiles-definitions>

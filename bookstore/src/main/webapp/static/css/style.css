@@ -30,7 +30,7 @@ body {
 
 .header .product-search img {
 	margin-top: 7.5px;
-	height: 100px;
+	height: 90px;
 }
 
 .product-search .search-content {
@@ -46,6 +46,24 @@ body {
 	outline: none;
 	font-size: 18px;
 	color: #AAAAAA;
+}
+
+#buttonheart {
+	margin-top: 35px;
+}
+
+#glyphiconheart {
+	color: red;
+	padding-top: 36px;
+	font-size: 30px;
+	border-color: black;
+}
+
+#glyphiconcart {
+	padding-left: 56px;
+	color: red;
+	font-size: 29px;
+	margin-top: -29px;
 }
 
 .search-content .vertical {
@@ -82,7 +100,7 @@ body {
 	color: white;
 }
 
-#dropdownMenuButton {
+.dropdown-menu-button {
 	color: black;
 	background-color: white;
 	padding: 10.25px;
@@ -117,4 +135,44 @@ body {
 .body {
 	background-color: #0000FF;
 	height: 35px;
+}
+
+.login {
+	margin: auto;
+	width: 38.5%;
+	border: 3px solid white;
+	padding: 10px;
+}
+
+.login h1 {
+	text-align: center;
+}
+
+.login input[type=text] {
+	height: 50px;
+	width: 490px;
+	border: 1px solid #ebebeb;
+	margin-bottom: 35px;
+	outline: none;
+	padding-left: 10px;
+}
+
+.login input[type=password] {
+	height: 50px;
+	width: 490px;
+	border: 1px solid #ebebeb;
+	margin-bottom: 15px;
+	outline: none;
+	padding-left: 10px;
+}
+
+.login button {
+	font-size: 19px;
+	height: 37px;
+	width: 490px;
+	background: #e7ab3c;
+	border: 1px solid #e7ab3c;
+	color: white;
+	outline: none;
+	margin-top: 15px;
 }
