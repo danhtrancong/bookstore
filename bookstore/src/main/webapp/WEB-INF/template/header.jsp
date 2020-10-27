@@ -13,14 +13,14 @@
 	<div class="product-search row">
 		<div class="col-md-2">
 			<img src="static/asset/logo.png" />
-		</div>
+		</div>	
 
 		<div class="col-md-8">
 			<div class="search-content row">
 				<div class="col-md-2">
 					<div class="dropdown">
-						<button class="btn btn-secondary dropdown-toggle" type="button"
-							id="dropdownMenuButton" data-toggle="dropdown"
+						<button class="btn btn-secondary dropdown-toggle dropdown-menu-button" 
+							data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Danh Mục</button>
 						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 							<a class="dropdown-item" href="#">Tiểu Thuyết</a> <a
@@ -33,8 +33,6 @@
 				<div class="col-md-1 vertical"></div>
 				<div class="col-md-8">
 					<input type="text" placeholder="Tìm kiếm sản phẩm mong muốn ?" />
-				</div>
-				<div class="col-md-1 icon-search">
 					<button type="button" class="button-search">
 						<span class="glyphicon glyphicon-search search" />
 					</button>
@@ -44,9 +42,10 @@
 
 		<div class="col-md-2">
 			<div>
-				<button type="button" class="button favourite">
-					<span class="glyphicon glyphicon-heart heart" />
-				</button>
+				<span class="glyphicon glyphicon-heart heart"  id="glyphiconheart"/>
+			</div>
+			<div>
+				<span class="glyphicon glyphicon-shopping-cart"  id="glyphiconcart"/>
 			</div>
 		</div>
 	</div>
