@@ -29,11 +29,12 @@
 	<definition name="registerPage" extends="bookstore.definition">
 		<put-attribute name="title" value="Register" />
 		<put-attribute name="body" value="/WEB-INF/view/register.jsp" />
+	</definition>	
+	
+	<!-- Login Page -->
+	<definition name="loginPage" extends="bookstore.definition">
+		<put-attribute name="title" value="User Login" />
+		<put-attribute name="body" value="/WEB-INF/view/login.jsp" />
 	</definition>
 	
-    <!-- Login Page -->
-    <definition name="loginPage" extends="bookstore.definition">
-        <put-attribute name="title" value="login" />
-        <put-attribute name="body" value="/WEB-INF/view/login.jsp" />
-    </definition>
 </tiles-definitions>
