@@ -115,8 +115,26 @@ body {
 }
 
 .navigation {
-	background-color: #00FF00;
-	height: 35px;
+	background-color: #252525;
+	height: 55px;
+	text-align: center;
+}
+
+.navigation  ul li {
+	display: inline;
+	margin-right: 15px;
+}
+
+.navigation a {
+	color: white;
+	font-size: 18px;
+}
+
+.navigation ul li div {
+	width: 30px;
+	height: 5px;
+	background-color: white;
+	margin: 6px 0;
 }
 
 .body {
