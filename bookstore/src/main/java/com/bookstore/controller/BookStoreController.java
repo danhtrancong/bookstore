@@ -23,4 +23,8 @@ public class BookStoreController {
 		
 		return "contactusPage";
 	}
+	@RequestMapping(value = { "/register" }, method = RequestMethod.GET)
+	public String registerPage(Model model) {
+		return "registerPage";
+	}
 }
