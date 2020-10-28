@@ -15,9 +15,9 @@
 			<img src="static/asset/logo.png" />
 		</div>	
 
-		<div class="col-md-8">
-			<div class="search-content row">
-				<div class="col-md-2">
+		<div class="col-md-8 search-content">
+			<ul>
+				<li class="dropdown-search">
 					<div class="dropdown">
 						<button class="btn btn-secondary dropdown-toggle dropdown-menu-button" 
 							data-toggle="dropdown"
@@ -28,25 +28,24 @@
 								class="dropdown-item" href="#">Văn Học</a>
 						</div>
 					</div>
-				</div>
-
-				<div class="col-md-1 vertical"></div>
-				<div class="col-md-8">
+				</li>
+				
+				<li class="vertical"></li>
+				
+				<li class="input-search">
 					<input type="text" placeholder="Tìm kiếm sản phẩm mong muốn ?" />
-					<button type="button" class="button-search">
-						<span class="glyphicon glyphicon-search search" />
+				</li>
+				<li>
+					<button class="button-search">
+							<span class="glyphicon glyphicon-search search"/>
 					</button>
-				</div>
-			</div>
+				</li>
+			</ul>
 		</div>
 
 		<div class="col-md-2">
-			<div>
-				<span class="glyphicon glyphicon-heart heart"  id="glyphiconheart"/>
-			</div>
-			<div>
-				<span class="glyphicon glyphicon-shopping-cart"  id="glyphiconcart"/>
-			</div>
+			<span class="glyphicon glyphicon-heart heart"/>
+			<span class="glyphicon glyphicon-shopping-cart"/>
 		</div>
 	</div>
 </div>

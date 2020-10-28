@@ -28,6 +28,13 @@ body {
 	height: 115px;
 }
 
+.header .product-search .glyphicon-shopping-cart, .header .product-search .heart
+	{
+	color: #dddddd;
+	padding-top: 18px;
+	font-size: 30px;
+}
+
 .header .product-search img {
 	margin-top: 7.5px;
 	height: 90px;
@@ -37,10 +44,11 @@ body {
 	height: 50px;
 	margin-top: 30px;
 	border: 1px solid #dddddd;
+	padding: 0px;
 }
 
 .search-content input {
-	height: 100%;
+	height: 94.30%;
 	width: 100%;
 	border: none;
 	outline: none;
@@ -48,56 +56,53 @@ body {
 	color: #AAAAAA;
 }
 
-#buttonheart {
-	margin-top: 35px;
+.header .search-content ul li {
+	list-style-type: none;
+	display: inline;
+	float: left;
 }
 
-#glyphiconheart {
-	color: red;
-	padding-top: 36px;
-	font-size: 30px;
-	border-color: black;
+.header .search-content ul {
+	padding: 0;
+	margin: 0;
 }
 
-#glyphiconcart {
-	padding-left: 56px;
-	color: red;
-	font-size: 29px;
-	margin-top: -29px;
+.header .search-content .dropdown-search {
+	width: 14.5%;
 }
 
-.search-content .vertical {
+.header .search-content .input-search {
+	width: 78%;
+	margin-left: 1.3%;
+}
+
+.header .search-content .button-search {
+	height: 100%;
+	width: 54px;
+	border: none;
+	background-color: #e7ab3c;
+	outline: none;
+}
+
+.header .search-content .vertical {
 	border-left: 1px solid #dddddd;
 	height: 50%;
-	margin-top: 10px;
-	padding: 0px;
-	max-width: 0px;
-}
-
-.search-content .col-md-8 {
-	margin-right: 71.5px;
+	margin-top: 12px;
 }
 
 .search-content .icon-search {
-	background-color: red;
+	background-color: black;
 }
 
 .search-content .col-md-8 {
 	margin-right: 71.5px;
+	background-color: yellow;
 }
 
 .search-content .icon-search {
 	background-color: white;
-}
-
-.icon-search .button-search {
-	background-color: #e7ab3c;
-	border: 1px solid #e7ab3c;
-}
-
-.search {
-	padding: 15.20px;
-	color: white;
+	margin-left: 218px;
+	font-size: 12px;
 }
 
 .dropdown-menu-button {
