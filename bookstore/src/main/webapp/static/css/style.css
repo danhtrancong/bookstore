@@ -1,0 +1,281 @@
+.row {
+	padding: 0px;
+	margin: 0px;
+}
+
+.header {
+	background-color: #C0C0C0;
+	height: 150px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.header .contact-information {
+	background-color: white;
+	height: 50px;
+	border: 1px solid #dddddd;
+}
+
+.header .contact-information .mail-contact {
+	font-size: 15px;
+	color: #252525;
+	float: right;
+	display: inline-block;
+}
+
+.header .contact-information .phone-contact {
+	float: left;
+	font-size: 14px;
+	color: #252525;
+	display: inline-block;
+}
+
+.header .contact-information .social-network {
+	font-size: 16px;
+	color: #252525;
+	float: right;
+	margin-right: 20px;
+}
+
+.header .contact-information .lang{
+	font-size: 15px;
+	color: #252525;
+	background-color: white;
+	padding-top: 10px;
+}
+
+.header .contact-information .login-top {
+	font-size: 15px;
+	color: #252525;
+	float: right;
+}
+.social-network ul li {
+  display:inline;
+  margin-right: 10px;
+}
+
+.header .border-right {
+	border-right: 1px solid #dddddd;
+	padding-top: 12px;
+}
+
+.header .product-search {
+	background-color: #FFFFFF;
+	height: 115px;
+}
+
+.header .product-search .glyphicon-shopping-cart, .header .product-search .heart
+	{
+	color: #dddddd;
+	padding-top: 18px;
+	font-size: 30px;
+}
+
+.header .product-search img {
+	margin-top: 7.5px;
+	height: 90px;
+}
+
+.product-search .search-content {
+	height: 50px;
+	margin-top: 30px;
+	border: 1px solid #dddddd;
+	padding: 0px;
+}
+
+.search-content input {
+	height: 94.30%;
+	width: 100%;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	color: #AAAAAA;
+}
+
+.header .search-content ul li {
+	list-style-type: none;
+	display: inline;
+	float: left;
+}
+
+.header .search-content ul {
+	padding: 0;
+	margin: 0;
+}
+
+.header .search-content .dropdown-search {
+	width: 14.5%;
+}
+
+.header .search-content .input-search {
+	width: 78%;
+	margin-left: 1.3%;
+}
+
+.header .search-content .button-search {
+	height: 100%;
+	width: 54px;
+	border: none;
+	background-color: #e7ab3c;
+	outline: none;
+}
+
+.header .search-content .vertical {
+	border-left: 1px solid #dddddd;
+	height: 50%;
+	margin-top: 12px;
+}
+
+.search-content .icon-search {
+	background-color: black;
+}
+
+.search-content .col-md-8 {
+	margin-right: 71.5px;
+	background-color: yellow;
+}
+
+.search-content .icon-search {
+	background-color: white;
+	margin-left: 218px;
+	font-size: 12px;
+}
+
+.header .contact-information .lang .lang-menu .dropdown-menu-button {
+    color: black;
+    background-color: white;
+    padding: 10.25px;
+    border: 0px;
+    font-size: 17px;
+    padding-right: 18.25px;
+}
+.dropdown-menu-button {
+    color: black;
+    background-color: white;
+    padding: 10.25px;
+    border: 0px;
+    font-size: 17px;
+    padding-right: 18.25px;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    font-size: 14px;
+}
+
+.navigation {
+	background-color: #252525;
+	height: 55px;
+	text-align: center;
+}
+
+.navigation  ul li {
+	display: inline;
+	margin-right: 15px;
+}
+
+.navigation a {
+	color: white;
+	font-size: 18px;
+}
+
+.navigation ul li div {
+	width: 30px;
+	height: 5px;
+	background-color: white;
+	margin: 6px 0;
+}
+
+.body {
+	background-color: #0000FF;
+	height: 35px;
+}
+
+.login {
+	margin: auto;
+	width: 38.5%;
+	border: 3px solid white;
+	padding: 10px;
+}
+
+.login h1 {
+	text-align: center;
+}
+
+.login input[type=text] {
+	height: 50px;
+	width: 490px;
+	border: 1px solid #ebebeb;
+	margin-bottom: 35px;
+	outline: none;
+	padding-left: 10px;
+}
+
+.login input[type=password] {
+	height: 50px;
+	width: 490px;
+	border: 1px solid #ebebeb;
+	margin-bottom: 15px;
+	outline: none;
+	padding-left: 10px;
+}
+
+.login button {
+	font-size: 19px;
+	height: 37px;
+	width: 490px;
+	background: #e7ab3c;
+	border: 1px solid #e7ab3c;
+	color: white;
+	outline: none;
+	margin-top: 15px;
+}
+
+/*  Register Form */
+.register-form {
+    margin: auto;
+    width: 38.5%;
+    border: 3px solid white;
+    padding: 10px;
+}
+
+.register-form h1 {
+    text-align: center;
+}
+
+.register-form input[type=text] {
+    height: 50px;
+    width: 490px;
+    border: 1px solid #ebebeb;
+    margin-bottom: 35px;
+    outline: none;
+    padding-left: 10px;
+}
+
+.register-form input[type=password] {
+    height: 50px;
+    width: 490px;
+    border: 1px solid #ebebeb;
+    margin-bottom: 15px;
+    outline: none;
+    padding-left: 10px;
+}
+
+.register-form button {
+    font-size: 19px;
+    height: 37px;
+    width: 490px;
+    background: #e7ab3c;
+    border: 1px solid #e7ab3c;
+    color: white;
+    outline: none;
+    margin-top: 15px;
+}
+
