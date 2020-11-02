@@ -16,21 +16,16 @@ public class BookStoreController {
 
 	@RequestMapping(value = { "/contactus" }, method = RequestMethod.GET)
 	public String contactusPage(Model model) {
-		
+
 		model.addAttribute("address", "Vietnam");
 		model.addAttribute("phone", "09888888");
 		model.addAttribute("email", "test@gmail.com");
-		
+
 		return "contactusPage";
 	}
-	
+
 	@RequestMapping(value = { "/edit" }, method = RequestMethod.GET)
-	public String showEditProductView(Model model) {		
+	public String showEditProductView(Model model) {
 		return "editPage";
-	}
-	
-	@RequestMapping(value = { "/access-denied" }, method = RequestMethod.GET)
-	public String showAccessDeniedView(Model model) {		
-		return "accessdeniedPage";
 	}
 }
