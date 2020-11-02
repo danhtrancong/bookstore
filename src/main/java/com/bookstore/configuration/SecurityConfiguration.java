@@ -41,7 +41,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.antMatchers("/home", "/list")
 				.access("hasRole('ADMIN') or hasRole('EMPLOYEE') or hasRole('CUSTOMER')")
 				.antMatchers("/edit/**").access("hasRole('ADMIN')")
-				.and().formLogin().loginPage("/login").loginProcessingUrl("/api-login").defaultSuccessUrl("/home", true).usernameParameter("username").passwordParameter("password")
+				.and().formLogin().loginPage("/auth/login").loginProcessingUrl("/api-login").defaultSuccessUrl("/home", true).usernameParameter("username").passwordParameter("password")
 				.and().csrf().and().exceptionHandling().accessDeniedPage("/access-denied");
 	}
 

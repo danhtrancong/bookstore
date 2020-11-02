@@ -38,13 +38,13 @@
 	</definition>
 	
 	<!-- Edit Page -->
-	<definition name="editPage" extends="base.definition">
+	<definition name="editPage" extends="bookstore.definition">
 		<put-attribute name="title" value="Edit Page" />
 		<put-attribute name="body" value="/WEB-INF/views/edit.jsp" />
 	</definition>
 	
 	<!-- Access Deny Page -->
-	<definition name="accessdeniedPage" extends="base.definition">
+	<definition name="accessdeniedPage" extends="bookstore.definition">
 		<put-attribute name="title" value="Access Denied Page" />
 		<put-attribute name="body" value="/WEB-INF/views/access-denied.jsp" />
 	</definition>
