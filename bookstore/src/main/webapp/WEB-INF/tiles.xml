@@ -22,37 +22,37 @@
 	<!-- ContactUs Page -->
 	<definition name="contactusPage" extends="bookstore.definition">
 		<put-attribute name="title" value="Contact us" />
-		<put-attribute name="body" value="/WEB-INF/view/contactus.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/contactus.jsp" />
 	</definition>
 
 	<!-- Register Page -->
 	<definition name="registerPage" extends="bookstore.definition">
 		<put-attribute name="title" value="Register" />
-		<put-attribute name="body" value="/WEB-INF/view/register.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/register.jsp" />
 	</definition>	
 	
 	<!-- Login Page -->
 	<definition name="loginPage" extends="bookstore.definition">
 		<put-attribute name="title" value="User Login" />
-		<put-attribute name="body" value="/WEB-INF/view/login.jsp" />
-	</definition>
-	
-	<!-- ContactUs Page -->
-	<definition name="loginPage" extends="base.definition">
-		<put-attribute name="title" value="login page" />
-		<put-attribute name="body" value="/WEB-INF/bodyfragments/login.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
 	</definition>
 	
 	<!-- Edit Page -->
 	<definition name="editPage" extends="base.definition">
-		<put-attribute name="title" value="edit page" />
-		<put-attribute name="body" value="/WEB-INF/bodyfragments/edit.jsp" />
+		<put-attribute name="title" value="Edit Page" />
+		<put-attribute name="body" value="/WEB-INF/views/edit.jsp" />
 	</definition>
 	
-	<!-- access-deny Page -->
+	<!-- Access Deny Page -->
 	<definition name="accessdeniedPage" extends="base.definition">
-		<put-attribute name="title" value="access denied page" />
-		<put-attribute name="body" value="/WEB-INF/bodyfragments/access-denied.jsp" />
+		<put-attribute name="title" value="Access Denied Page" />
+		<put-attribute name="body" value="/WEB-INF/views/access-denied.jsp" />
+	</definition>
+	
+	<!-- Product Page -->
+	<definition name="productView" extends="base.definition">
+		<put-attribute name="title" value="Products" />
+		<put-attribute name="body" value="/WEB-INF/views/products.jsp" />
 	</definition>
 	
 </tiles-definitions>

@@ -14,7 +14,6 @@
     <link href="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />" rel="stylesheet">
 	<link href="<c:url value="/css/style.css" />" rel="stylesheet" type="text/css">
   
- 
 	<script src="<c:url value="/css/bootstrap-4.4.1/popper.min.js" />"></script>
 	<script src="<c:url value="/css/bootstrap-4.4.1/bootstrap.min.js" />"></script>
 	<script src="<c:url value="/js/jquery-3.3.1.min.js"/>"></script>
@@ -27,9 +26,6 @@
     <script src="<c:url value="/js/jquery.slicknav.js"/>"></script>
     <script src="<c:url value="/js/owl.carousel.min.js"/>"></script>
     <script src="<c:url value="/js/main.js"/>"></script>
-	
-	
-	
 		
 	<link href="<c:url value="/css/bootstrap-4.4.1/font-awesome.min.css"  />" rel="stylesheet" type="text/css">
     <link href="<c:url value="/css/bootstrap-4.4.1/themify-icons.css"  />" rel="stylesheet" type="text/css">
