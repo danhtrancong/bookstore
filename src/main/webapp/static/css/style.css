@@ -36,7 +36,7 @@
 	margin-right: 20px;
 }
 
-.header .contact-information .lang{
+.header .contact-information .lang {
 	font-size: 15px;
 	color: #252525;
 	background-color: white;
@@ -48,9 +48,10 @@
 	color: #252525;
 	float: right;
 }
+
 .social-network ul li {
-  display:inline;
-  margin-right: 10px;
+	display: inline;
+	margin-right: 10px;
 }
 
 .header .border-right {
@@ -141,33 +142,35 @@
 }
 
 .header .contact-information .lang .lang-menu .dropdown-menu-button {
-    color: black;
-    background-color: white;
-    padding: 10.25px;
-    border: 0px;
-    font-size: 17px;
-    padding-right: 18.25px;
+	color: black;
+	background-color: white;
+	padding: 10.25px;
+	border: 0px;
+	font-size: 17px;
+	padding-right: 18.25px;
 }
+
 .dropdown-menu-button {
-    color: black;
-    background-color: white;
-    padding: 10.25px;
-    border: 0px;
-    font-size: 17px;
-    padding-right: 18.25px;
+	color: black;
+	background-color: white;
+	padding: 10.25px;
+	border: 0px;
+	font-size: 17px;
+	padding-right: 18.25px;
 }
+
 .dropdown-item {
-    display: block;
-    width: 100%;
-    padding: .25rem 1.5rem;
-    clear: both;
-    font-weight: 400;
-    color: #212529;
-    text-align: inherit;
-    white-space: nowrap;
-    background-color: transparent;
-    border: 0;
-    font-size: 14px;
+	display: block;
+	width: 100%;
+	padding: .25rem 1.5rem;
+	clear: both;
+	font-weight: 400;
+	color: #212529;
+	text-align: inherit;
+	white-space: nowrap;
+	background-color: transparent;
+	border: 0;
+	font-size: 14px;
 }
 
 .navigation {
@@ -240,42 +243,72 @@
 
 /*  Register Form */
 .register-form {
-    margin: auto;
-    width: 38.5%;
-    border: 3px solid white;
-    padding: 10px;
+	margin: auto;
+	width: 38.5%;
+	border: 3px solid white;
+	padding: 10px;
 }
 
 .register-form h1 {
-    text-align: center;
+	text-align: center;
 }
 
 .register-form input[type=text] {
-    height: 50px;
-    width: 490px;
-    border: 1px solid #ebebeb;
-    margin-bottom: 35px;
-    outline: none;
-    padding-left: 10px;
+	height: 50px;
+	width: 490px;
+	border: 1px solid #ebebeb;
+	margin-bottom: 35px;
+	outline: none;
+	padding-left: 10px;
 }
 
 .register-form input[type=password] {
-    height: 50px;
-    width: 490px;
-    border: 1px solid #ebebeb;
-    margin-bottom: 15px;
-    outline: none;
-    padding-left: 10px;
+	height: 50px;
+	width: 490px;
+	border: 1px solid #ebebeb;
+	margin-bottom: 15px;
+	outline: none;
+	padding-left: 10px;
 }
 
 .register-form button {
-    font-size: 19px;
-    height: 37px;
-    width: 490px;
-    background: #e7ab3c;
-    border: 1px solid #e7ab3c;
-    color: white;
-    outline: none;
-    margin-top: 15px;
+	font-size: 19px;
+	height: 37px;
+	width: 490px;
+	background: #e7ab3c;
+	border: 1px solid #e7ab3c;
+	color: white;
+	outline: none;
+	margin-top: 15px;
 }
 
+/* products */
+.product-info {
+	background-color: white;
+	height: 500px;
+}
+
+.product-info .category {
+	height: 400px;
+	margin-top: 30px;
+}
+
+.product-info .products {
+	background-color: blue;
+	height: 400px;
+}
+
+.product-info .category ul {
+	list-style-type: none;
+	padding-left: 0px;
+	margin-top: 20px;
+}
+
+.product-info .category ul li {
+	height: 25px;
+}
+
+.product-info .category h3 {
+	color: black;
+	font-weight: 600;
+}
