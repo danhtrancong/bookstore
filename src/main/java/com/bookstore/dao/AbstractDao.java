@@ -7,6 +7,8 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.transaction.annotation.Transactional;
 
+import com.bookstore.entity.CategoryEntity;
+
 public abstract class AbstractDao<T> implements GenericDao<T> {
 
     @PersistenceContext
@@ -25,6 +27,10 @@ public abstract class AbstractDao<T> implements GenericDao<T> {
     public List<T> findAll() {
         return em.createQuery("from " + clazz.getName()).getResultList();
     }
+    
+    public List<CategoryEntity> getCategories() {
+		return em.createQuery("from " + clazz.getName()).getResultList();
+	}
 
     @Transactional
     public T create(T entity) {
@@ -47,4 +53,6 @@ public abstract class AbstractDao<T> implements GenericDao<T> {
         T entity = findOne(entityId);
         delete(entity);
     }
+    
+	
 }

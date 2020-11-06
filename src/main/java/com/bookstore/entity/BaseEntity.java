@@ -18,7 +18,7 @@ public abstract class BaseEntity implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "timestamp_created", nullable = false)
@@ -38,11 +38,11 @@ public abstract class BaseEntity implements Serializable {
 		updatedDate = Calendar.getInstance();
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
