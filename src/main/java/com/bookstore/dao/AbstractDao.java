@@ -8,51 +8,55 @@ import javax.persistence.PersistenceContext;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bookstore.entity.CategoryEntity;
+import com.bookstore.entity.LangBookEntity;
 
 public abstract class AbstractDao<T> implements GenericDao<T> {
 
-    @PersistenceContext
-    protected EntityManager em;
+	@PersistenceContext
+	protected EntityManager em;
 
-    private Class<T> clazz;
+	private Class<T> clazz;
 
-    public void setClazz(Class<T> clazz) {
-        this.clazz = clazz;
-    }
+	public void setClazz(Class<T> clazz) {
+		this.clazz = clazz;
+	}
 
-    public T findOne(long id) {
-        return em.find(clazz, id);
-    }
+	public T findOne(long id) {
+		return em.find(clazz, id);
+	}
 
-    public List<T> findAll() {
-        return em.createQuery("from " + clazz.getName()).getResultList();
-    }
-    
-    public List<CategoryEntity> getCategories() {
+	public List<T> findAll() {
 		return em.createQuery("from " + clazz.getName()).getResultList();
 	}
 
-    @Transactional
-    public T create(T entity) {
-        em.persist(entity);
-        return entity;
-    }
+	public List<CategoryEntity> getCategories() {
+		return em.createQuery("from " + clazz.getName()).getResultList();
+	}
 
-    @Transactional
-    public T update(T entity) {
-        return (T) em.merge(entity);
-    }
+	public List<LangBookEntity> getTypeBookEntities() {
+		return em.createQuery("from " + clazz.getName()).getResultList();
+	}
 
-    @Transactional
-    public void delete(T entity) {
-        em.remove(entity);
-    }
+	@Transactional
+	public T create(T entity) {
+		em.persist(entity);
+		return entity;
+	}
 
-    @Transactional
-    public void deleteById(long entityId) {
-        T entity = findOne(entityId);
-        delete(entity);
-    }
-    
-	
+	@Transactional
+	public T update(T entity) {
+		return (T) em.merge(entity);
+	}
+
+	@Transactional
+	public void delete(T entity) {
+		em.remove(entity);
+	}
+
+	@Transactional
+	public void deleteById(long entityId) {
+		T entity = findOne(entityId);
+		delete(entity);
+	}
+
 }

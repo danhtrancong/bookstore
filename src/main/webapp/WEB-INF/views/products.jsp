@@ -5,7 +5,11 @@
 		<h3>Categories</h3>
 		<ul>
 		<c:forEach items="${product.categories}" var="category"> 
-			<li><a href='#'><c:out value="${category.name}"></c:out></a></li>						
+			<li><a href='#'><c:out value="${category.name}"></c:out></a></li>
+		</c:forEach>
+		<h3>Language Book</h3>
+		<c:forEach items="${product.langbooks}" var="langbook"> 
+			<li><a href='#'><c:out value="${langbook.name}"></c:out></a></li>								
 		</c:forEach>
 		</ul>
 	</div>

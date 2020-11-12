@@ -22,8 +22,19 @@ public class ProductEntity extends BaseEntity {
 	@ManyToOne
 	@JoinColumn(name = "category_id", nullable = false)
 	// category used in mappedBy
-
 	private CategoryEntity category;
+
+	@ManyToOne
+	@JoinColumn(name = "langbook_id", nullable = false)
+	private LangBookEntity langbook;
+
+	public LangBookEntity getLangbook() {
+		return langbook;
+	}
+
+	public void setLangbook(LangBookEntity langbook) {
+		this.langbook = langbook;
+	}
 
 	public String getName() {
 		return name;
