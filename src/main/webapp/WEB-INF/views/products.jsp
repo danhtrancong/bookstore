@@ -5,13 +5,13 @@
 	<div class="col-md-2 category">
 		<h3>Categories</h3>
 		<ul>
-			<c:forEach items="${productView.categories}" var="category">
+			<c:forEach items="${productsView.categories}" var="category">
 				<li><c:out value="${category.name}"></c:out></li>
 			</c:forEach>
 		</ul>
 		<h3>Languages</h3>
 		<ul>
-			<c:forEach items="${productView.languages}" var="language">
+			<c:forEach items="${productsView.languages}" var="language">
 				<li><c:out value="${language.name}"></c:out></li>
 			</c:forEach>
 		</ul>
