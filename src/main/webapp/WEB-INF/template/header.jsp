@@ -46,7 +46,7 @@
 	</div>
 	<div class="product-search row">
 		<div class="col-md-2">
-			<img src="../static/asset/logo.png" />
+			<img src="/bookstore/static/asset/logo.png" />
 		</div>
 
 		<div class="col-md-8 search-content">
