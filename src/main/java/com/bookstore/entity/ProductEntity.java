@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -22,8 +23,11 @@ public class ProductEntity extends BaseEntity {
 	@ManyToOne
 	@JoinColumn(name = "category_id", nullable = false)
 	// category used in mappedBy
-
 	private CategoryEntity category;
+
+	@ManyToOne
+	@JoinColumn(name = "language_id", nullable = false)
+	private LanguageEntity language;
 
 	public String getName() {
 		return name;
@@ -63,6 +67,14 @@ public class ProductEntity extends BaseEntity {
 
 	public void setCategory(CategoryEntity category) {
 		this.category = category;
+	}
+
+	public LanguageEntity getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(LanguageEntity language) {
+		this.language = language;
 	}
 
 }

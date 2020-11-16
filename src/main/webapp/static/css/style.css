@@ -294,8 +294,36 @@
 }
 
 .product-info .products {
-	background-color: blue;
 	height: 400px;
+	margin-top: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.product-info .products td {
+	padding-top: 20px;
+	padding-right: 20px;
+	width: 33.33%;
+	text-align: center;
+	vertical-align: text-top;
+}
+
+.product-info .products .product-category {
+	padding-top: 20px;
+}
+
+.product-info .products img {
+	width: 200px;
+	height: 200px;
+}
+
+.product-info .products .price {
+	color: orange;
+}
+
+.product-info .products .price del {
+	color: gray;
+	/*  text-decoration: line-through; */
 }
 
 .product-info .category ul {

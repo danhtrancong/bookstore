@@ -1,9 +1,11 @@
 package com.bookstore.service;
 
 import com.bookstore.dto.ProductDTO;
+import com.bookstore.dto.ProductListDTO;
 
 public interface ProductService {
 
-	ProductDTO getProduct();
+	ProductListDTO getProduct();
+	ProductDTO getProductById(long id);
 
 }
