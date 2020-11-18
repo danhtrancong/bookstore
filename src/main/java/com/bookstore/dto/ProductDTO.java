@@ -1,28 +1,61 @@
 package com.bookstore.dto;
 
-import java.util.ArrayList;
+import java.math.BigDecimal;
 import java.util.List;
 
+import com.bookstore.entity.CategoryEntity;
 import com.bookstore.entity.LangBookEntity;
 
 public class ProductDTO {
-	List<CategoryDTO> categories = new ArrayList<>();
-	List<LangBookDTO> langbooks = new ArrayList<>();
 
-	public List<CategoryDTO> getCategories() {
-		return categories;
+	private Long id;
+	public Long getId() {
+		return id;
 	}
-
-	public void setCategories(List<CategoryDTO> categories) {
-		this.categories = categories;
+	public void setId(Long id) {
+		this.id = id;
 	}
-
-	public List<LangBookDTO> getLangbooks() {
-		return langbooks;
+	public String getName() {
+		return name;
 	}
-
-	public void setLangbooks(List<LangBookDTO> langbooks) {
-		this.langbooks = langbooks;
+	public void setName(String name) {
+		this.name = name;
 	}
+	public BigDecimal getSallingPrice() {
+		return sallingPrice;
+	}
+	public void setSallingPrice(BigDecimal sallingPrice) {
+		this.sallingPrice = sallingPrice;
+	}
+	public BigDecimal getOriginalPrice() {
+		return originalPrice;
+	}
+	public void setOriginalPrice(BigDecimal originalPrice) {
+		this.originalPrice = originalPrice;
+	}
+	public String getImageUrl() {
+		return imageUrl;
+	}
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+	public CategoryEntity getCategory() {
+		return category;
+	}
+	public void setCategory(CategoryEntity category) {
+		this.category = category;
+	}
+	public LangBookEntity getLangbook() {
+		return langbook;
+	}
+	public void setLangbook(LangBookEntity langbook) {
+		this.langbook = langbook;
+	}
+	private String name;
+	private BigDecimal sallingPrice;
+	private BigDecimal originalPrice;
+	private String imageUrl;
+	private CategoryEntity category;
+	private LangBookEntity langbook;
 
 }

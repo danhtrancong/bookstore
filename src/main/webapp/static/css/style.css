@@ -306,7 +306,41 @@
 	height: 25px;
 }
 
-.product-info .products {
-	background-color: green;
-	height: 400px;
+
+#title-sanpham{
+	margin-top: 100px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500
+}
+
+.product-info .product{
+	padding-bottom:16px;
+	margin-top: 30px;
+	background-color: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-left: 10px;
+}
+
+.product-info .product img{
+	height: 256px;
+	width: 200px;
+}
+
+.product-info .product .price {
+	font-size: 14px;
+    color: orange;;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+}
+
+.product-info .product .product-category {
+    padding-top: 20px;
+}
+
+.product-info .product .price del {
+    color: gray;
+    /*  text-decoration: line-through; */
 }

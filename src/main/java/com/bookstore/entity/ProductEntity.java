@@ -11,6 +11,7 @@ import javax.persistence.Table;
 @Table(name = "product")
 public class ProductEntity extends BaseEntity {
 
+
 	private String name;
 
 	private BigDecimal sallingPrice;
@@ -76,4 +77,4 @@ public class ProductEntity extends BaseEntity {
 		this.category = category;
 	}
 
-}
+	}
