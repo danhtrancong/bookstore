@@ -13,6 +13,7 @@ public class ProductDTO {
 	private String imageUrl;
 	private CategoryEntity category;
 	private LanguageEntity language;
+	private String summary;
 
 	public Long getId() {
 		return id;
@@ -68,6 +69,14 @@ public class ProductDTO {
 
 	public void setLanguage(LanguageEntity language) {
 		this.language = language;
+	}
+
+	public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
 	}
 
 }

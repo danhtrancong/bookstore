@@ -310,6 +310,14 @@
 
 .product-info .products .product-category {
 	padding-top: 20px;
+	font-size: 15px;
+    color: #757575;
+}
+
+.product-info .products .product-name {
+	padding-top: 10px;
+	font-weight: bold;
+	font-size: 16px;
 }
 
 .product-info .products img {
@@ -318,6 +326,8 @@
 }
 
 .product-info .products .price {
+	padding-top: 10px;
+	padding-bottom: 15px;
 	color: orange;
 }
 

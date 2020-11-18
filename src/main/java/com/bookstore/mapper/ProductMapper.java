@@ -35,6 +35,7 @@ public class ProductMapper {
 		product.setImageUrl(c.getImageUrl());
 		product.setOriginalPrice(c.getOriginalPrice());
 		product.setSallingPrice(c.getSallingPrice());
+		product.setSummary(c.getSummary());
 		return product;
 	}
 

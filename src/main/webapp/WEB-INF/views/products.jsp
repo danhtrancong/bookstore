@@ -25,7 +25,7 @@
 					<div class="product-item">
 						<div><a href="product/<c:out value="${product.id}"></c:out>"><img src="<c:out value="${product.imageUrl}"></c:out>" /></a></div>
 						<div class="product-category"><c:out value="${product.category.name}"></c:out> - <c:out value="${product.language.name}"></c:out></div>
-						<div><c:out value="${product.name}"></c:out></div>
+						<div class="product-name"><c:out value="${product.name}"></c:out></div>
 						<div class="price">$<c:out value="${product.sallingPrice}"></c:out> 
 							<del> $<c:out value="${product.originalPrice}"></c:out></del>
 						</div>

@@ -12,6 +12,7 @@
 		<div class="price">$<c:out value="${productDetail.sallingPrice}"></c:out> 
 			<del> $<c:out value="${productDetail.originalPrice}"></c:out></del>
 		</div>
+		<div><c:out value="${productDetail.summary}"></c:out></div>
 	</div>
 	<div class="col-md-3 right-ads"></div>
 </div>
