@@ -9,6 +9,19 @@ import com.bookstore.entity.LangBookEntity;
 public class ProductDTO {
 
 	private Long id;
+	private String name;
+	private BigDecimal sallingPrice;
+	private BigDecimal originalPrice;
+	private String imageUrl;
+	private CategoryEntity category;
+	private LangBookEntity langbook;
+	private String description;
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -51,11 +64,6 @@ public class ProductDTO {
 	public void setLangbook(LangBookEntity langbook) {
 		this.langbook = langbook;
 	}
-	private String name;
-	private BigDecimal sallingPrice;
-	private BigDecimal originalPrice;
-	private String imageUrl;
-	private CategoryEntity category;
-	private LangBookEntity langbook;
+
 
 }

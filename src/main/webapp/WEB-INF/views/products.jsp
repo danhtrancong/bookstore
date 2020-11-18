@@ -17,12 +17,12 @@
 
 	<div id="title-sanpham">
 		<span>LIST BOOK</span>
-		<div class="row" style="margin-top:42px">
+		<div class="row" style="margin-top:40px">
 			<c:forEach var="product" varStatus="productCounter" items="${productsView.products}">
-				<div class="col-md-2 col-sm-8 product">
-					<a href="product-detail/${product.id}}">
-						<img alt="img" src='<c:url value="../static/asset/product-img/${product.imageUrl}"/>' /><br/>
-							<span>${product.name}</span><br/></a>
+				<div class="col-md-2 col-sm-8 product">								
+						<div><a href="product/<c:out value="${product.id}"></c:out>"><img src="<c:out value="/bookstore/static/asset/product-img/${product.imageUrl}"></c:out>" /></a></div>
+                        <div class="product-category"><c:out value="${product.category.name}"></c:out> - <c:out value="${product.langbook.name}"></c:out></div>
+							<div><c:out value="${product.name}"></c:out></div>
 							<span class="price">${product.sallingPrice} VNĐ</span>
 							<del>$<c:out value="${product.originalPrice}"></c:out></del>
 					

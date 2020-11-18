@@ -311,7 +311,8 @@
 	margin-top: 100px;
     text-align: center;
     font-size: 18px;
-    font-weight: 500
+    font-weight: 500;
+    width: 80%
 }
 
 .product-info .product{
@@ -326,7 +327,7 @@
 
 .product-info .product img{
 	height: 256px;
-	width: 200px;
+	width: 100%;
 }
 
 .product-info .product .price {

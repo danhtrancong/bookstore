@@ -37,6 +37,7 @@ public class ProductMapper {
 		product.setImageUrl(c.getImageUrl());
 		product.setOriginalPrice(c.getOriginalPrice());
 		product.setSallingPrice(c.getSallingPrice());
+        product.setDescription(c.getDescription());
 		return product;
 	}
 }

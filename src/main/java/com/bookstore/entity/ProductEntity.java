@@ -2,6 +2,7 @@ package com.bookstore.entity;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -11,7 +12,6 @@ import javax.persistence.Table;
 @Table(name = "product")
 public class ProductEntity extends BaseEntity {
 
-
 	private String name;
 
 	private BigDecimal sallingPrice;
@@ -19,6 +19,17 @@ public class ProductEntity extends BaseEntity {
 	private BigDecimal originalPrice;
 
 	private String imageUrl;
+
+	@Column(columnDefinition = "TEXT")
+	private String description;
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
 	@ManyToOne
 	@JoinColumn(name = "category_id", nullable = false)
@@ -77,4 +88,4 @@ public class ProductEntity extends BaseEntity {
 		this.category = category;
 	}
 
-	}
+}
