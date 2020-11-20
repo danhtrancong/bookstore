@@ -38,16 +38,6 @@ public class ProductDaoImpl extends AbstractDao<ProductEntity> implements Produc
 		List<ProductEntity> products = query.getResultList();
 		return products;
 	}
-
-//	@Override
-//	public ProductEntity getProductById(long id) {
-//		CriteriaBuilder cb = em.getCriteriaBuilder();
-//		CriteriaQuery<ProductEntity> cq = cb.createQuery(ProductEntity.class);
-//		Root<ProductEntity> root = cq.from(ProductEntity.class);
-//		cq.where(cb.equal(root.get("id"), id));
-//		TypedQuery<ProductEntity> query = em.createQuery(cq);
-//		return query.getSingleResult();
-//	}
 	
 	@Override
 	public ProductEntity getProductById(long id) {

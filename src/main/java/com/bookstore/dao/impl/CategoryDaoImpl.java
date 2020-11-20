@@ -38,4 +38,9 @@ public class CategoryDaoImpl extends AbstractDao<CategoryEntity> implements Cate
 		List<CategoryEntity> categories = query.getResultList();
 		return categories;
 	}
+	
+	@Override
+	public CategoryEntity getCategoryById(long id) {
+		return findOne(id);
+	}
 }

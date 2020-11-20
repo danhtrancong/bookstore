@@ -12,7 +12,7 @@ import com.bookstore.dao.ProductDao;
 import com.bookstore.dto.CategoryDTO;
 import com.bookstore.dto.LanguageDTO;
 import com.bookstore.dto.ProductDTO;
-import com.bookstore.dto.ProductListDTO;
+import com.bookstore.dto.ProductsInfoDTO;
 import com.bookstore.entity.CategoryEntity;
 import com.bookstore.entity.LanguageEntity;
 import com.bookstore.entity.ProductEntity;
@@ -32,11 +32,18 @@ public class ProductServiceImpl implements ProductService {
 	private ProductDao productDao;
 
 	@Override
-	public ProductListDTO getProduct() {
+	public ProductsInfoDTO getProduct(Long categoryId) {
 		List<CategoryEntity> categories = categoryDao.getCategories();
 		List<LanguageEntity> languages = languageDao.getLanguages();
-		List<ProductEntity> productsEntity = productDao.getProducts();
-		ProductListDTO productDTO = new ProductListDTO();
+		List<ProductEntity> productsEntity;
+		if (categoryId == null) {
+			productsEntity = productDao.getProducts();
+		} else {
+			CategoryEntity category = categoryDao.getCategoryById(categoryId);
+			productsEntity = category.getProducts();
+		}
+
+		ProductsInfoDTO productDTO = new ProductsInfoDTO();
 
 //		List<CategoryDTO> categoriesDTO = categories.stream()
 //				.map(categoryEntity -> ProductMapper.mapFromEntity(categoryEntity)).collect(Collectors.toList());
@@ -47,7 +54,8 @@ public class ProductServiceImpl implements ProductService {
 		List<LanguageDTO> languagesDTO = languages.stream().map(ProductMapper::mapFromEntity)
 				.collect(Collectors.toList());
 
-		List<ProductDTO> products = productsEntity.stream().map(ProductMapper::mapFromEntity).collect(Collectors.toList());
+		List<ProductDTO> products = productsEntity.stream().map(ProductMapper::mapFromEntity)
+				.collect(Collectors.toList());
 
 		productDTO.getCategories().addAll(categoriesDTO);
 		productDTO.getLanguages().addAll(languagesDTO);

@@ -3,7 +3,6 @@ package com.bookstore.dto;
 import java.math.BigDecimal;
 
 import com.bookstore.entity.CategoryEntity;
-import com.bookstore.entity.LanguageEntity;
 
 public class ProductDTO {
 	private Long id;
@@ -11,8 +10,8 @@ public class ProductDTO {
 	private BigDecimal sallingPrice;
 	private BigDecimal originalPrice;
 	private String imageUrl;
-	private CategoryEntity category;
-	private LanguageEntity language;
+	private String category;
+	private String language;
 	private String summary;
 
 	public Long getId() {
@@ -55,19 +54,19 @@ public class ProductDTO {
 		this.imageUrl = imageUrl;
 	}
 
-	public CategoryEntity getCategory() {
+	public String getCategory() {
 		return category;
 	}
 
-	public void setCategory(CategoryEntity category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 
-	public LanguageEntity getLanguage() {
+	public String getLanguage() {
 		return language;
 	}
 
-	public void setLanguage(LanguageEntity language) {
+	public void setLanguage(String language) {
 		this.language = language;
 	}
 

@@ -7,4 +7,6 @@ import com.bookstore.entity.CategoryEntity;
 public interface CategoryDao {
 
 	List<CategoryEntity> getCategories();
+
+	CategoryEntity getCategoryById(long categoryId);
 }

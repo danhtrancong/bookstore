@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bookstore.service.ProductService;
 
@@ -17,16 +18,16 @@ public class ProductController {
 	@Autowired
 	ProductService productService;
 
-	@RequestMapping(method = RequestMethod.GET)
-	public String showProductView(Model model) {
-		model.addAttribute("productsView", productService.getProduct());
-		return "productsView";
+	@GetMapping("/{id}")
+	public String getProductDetail(Model model, @PathVariable("id") Long id) {
+		model.addAttribute("productDetail", productService.getProductById(id));
+		return "productDetail";
 	}
 
-	@GetMapping("/{id}")
-	public String listCustomersByName(Model model, @PathVariable("id") String id) {
-		model.addAttribute("productDetail", productService.getProductById(Long.parseLong(id)));
-		return "productDetail";
+	@RequestMapping(method = RequestMethod.GET)
+	public String showProductsView(Model model, @RequestParam("categoryId") Long categoryId) {
+		model.addAttribute("productsView", productService.getProduct(categoryId));
+		return "productsView";
 	}
 
 }

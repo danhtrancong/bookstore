@@ -30,8 +30,8 @@ public class ProductMapper {
 		ProductDTO product = new ProductDTO();
 		product.setId(c.getId());
 		product.setName(c.getName());
-		product.setCategory(c.getCategory());
-		product.setLanguage(c.getLanguage());
+		product.setCategory(c.getCategory().getName());
+		product.setLanguage(c.getLanguage().getName());
 		product.setImageUrl(c.getImageUrl());
 		product.setOriginalPrice(c.getOriginalPrice());
 		product.setSallingPrice(c.getSallingPrice());

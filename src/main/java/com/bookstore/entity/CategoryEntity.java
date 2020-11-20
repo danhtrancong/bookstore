@@ -14,7 +14,7 @@ public class CategoryEntity extends BaseEntity {
 
 	private String name;
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "category")
 	List<ProductEntity> products = new ArrayList<>();
 
 	public String getName() {
