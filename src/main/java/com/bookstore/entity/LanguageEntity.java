@@ -9,12 +9,12 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "category")
-public class CategoryEntity extends BaseEntity {
+@Table(name = "language")
+public class LanguageEntity extends BaseEntity {
 
 	private String name;
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "category")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "language")
 	List<ProductEntity> products = new ArrayList<>();
 
 	public String getName() {

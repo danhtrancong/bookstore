@@ -50,9 +50,15 @@
 	</definition>
 	
 	<!-- Products Page -->
-	<definition name="productView" extends="bookstore.definition">
+	<definition name="productsView" extends="bookstore.definition">
 		<put-attribute name="title" value="Products" />
 		<put-attribute name="body" value="/WEB-INF/views/products.jsp" />
+	</definition>
+	
+	<!-- Product Detail Page -->
+	<definition name="productDetail" extends="bookstore.definition">
+		<put-attribute name="title" value="Product Detail" />
+		<put-attribute name="body" value="/WEB-INF/views/product-detail.jsp" />
 	</definition>
 	
 </tiles-definitions>

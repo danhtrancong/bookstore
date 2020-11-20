@@ -1,36 +1,26 @@
-package com.bookstore.entity;
+package com.bookstore.dto;
 
 import java.math.BigDecimal;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import com.bookstore.entity.CategoryEntity;
 
-@Entity
-@Table(name = "product")
-public class ProductEntity extends BaseEntity {
-
+public class ProductDTO {
+	private Long id;
 	private String name;
-
 	private BigDecimal sallingPrice;
-
 	private BigDecimal originalPrice;
-
 	private String imageUrl;
-	
-	@Column(columnDefinition="TEXT")
+	private String category;
+	private String language;
 	private String summary;
 
-	@ManyToOne
-	@JoinColumn(name = "category_id", nullable = false)
-	// category used in mappedBy
-	private CategoryEntity category;
+	public Long getId() {
+		return id;
+	}
 
-	@ManyToOne
-	@JoinColumn(name = "language_id", nullable = false)
-	private LanguageEntity language;
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;
@@ -64,19 +54,19 @@ public class ProductEntity extends BaseEntity {
 		this.imageUrl = imageUrl;
 	}
 
-	public CategoryEntity getCategory() {
+	public String getCategory() {
 		return category;
 	}
 
-	public void setCategory(CategoryEntity category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 
-	public LanguageEntity getLanguage() {
+	public String getLanguage() {
 		return language;
 	}
 
-	public void setLanguage(LanguageEntity language) {
+	public void setLanguage(String language) {
 		this.language = language;
 	}
 
@@ -88,5 +78,4 @@ public class ProductEntity extends BaseEntity {
 		this.summary = summary;
 	}
 
-	
 }
