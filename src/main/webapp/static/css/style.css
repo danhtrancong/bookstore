@@ -230,15 +230,16 @@
 	padding-left: 10px;
 }
 
-.login button {
+.login .loginBtn {
 	font-size: 19px;
 	height: 37px;
-	width: 490px;
+	width: 30%;
 	background: #e7ab3c;
 	border: 1px solid #e7ab3c;
 	color: white;
 	outline: none;
 	margin-top: 15px;
+	margin-bottom: 10px;
 }
 
 /*  Register Form */

@@ -1,5 +1,7 @@
 package com.bookstore.controller;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +12,11 @@ public class BookStoreController {
 
 	@RequestMapping(value = { "/home" }, method = RequestMethod.GET)
 	public String homePage(Model model) {
+		Authentication myUser = SecurityContextHolder.getContext().getAuthentication();
+		String userEmail = myUser.getName();
+		if (userEmail != null && !(userEmail.equals("anonymousUser"))) {
+			model.addAttribute("email", userEmail);
+		}
 		return "homePage";
 	}
 

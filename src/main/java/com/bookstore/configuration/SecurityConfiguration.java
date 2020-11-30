@@ -38,9 +38,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-				.antMatchers("/home", "/list").access("hasRole('ADMIN') or hasRole('EMPLOYEE') or hasRole('CUSTOMER')")
+				.antMatchers("/user-info", "/list").access("hasRole('ADMIN') or hasRole('EMPLOYEE') or hasRole('CUSTOMER')")
 				.antMatchers("/edit/**").access("hasRole('ADMIN')")
-				.and().formLogin().loginPage("/auth/login").loginProcessingUrl("/api-login").defaultSuccessUrl("/home", true).usernameParameter("username").passwordParameter("password")
+				.and().formLogin().loginPage("/auth/login").loginProcessingUrl("/api-login").defaultSuccessUrl("/home", true).usernameParameter("email").passwordParameter("password")
 				.and().csrf().and().exceptionHandling().accessDeniedPage("/access-denied");
 	}
 
