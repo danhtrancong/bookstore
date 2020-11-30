@@ -8,7 +8,7 @@ public interface GenericDao<T>
 
 	List<T> findAll();
 
-	T create(T entity);
+	T persist(T entity);
 
 	T update(T entity);
 

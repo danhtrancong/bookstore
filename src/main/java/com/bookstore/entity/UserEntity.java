@@ -19,9 +19,9 @@ public class UserEntity extends BaseEntity {
 	private String fullName;
 
 	@Column(name = "phone_number")
-	private int phonNumber;
+	private String phonNumber;
 
-	@Column(name = "email")
+	@Column(name = "email", unique = true)
 	private String email;
 
 	@Column(name = "password")
@@ -40,11 +40,11 @@ public class UserEntity extends BaseEntity {
 		this.fullName = fullName;
 	}
 
-	public int getPhonNumber() {
+	public String getPhonNumber() {
 		return phonNumber;
 	}
 
-	public void setPhonNumber(int phonNumber) {
+	public void setPhonNumber(String phonNumber) {
 		this.phonNumber = phonNumber;
 	}
 

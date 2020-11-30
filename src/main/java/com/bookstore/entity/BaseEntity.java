@@ -14,7 +14,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @MappedSuperclass
-public abstract class BaseEntity implements Serializable {
+public class BaseEntity implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,19 +24,20 @@ public abstract class BaseEntity implements Serializable {
 	@Column(name = "timestamp_created", nullable = false)
 	private Calendar createdDate;
 
+	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "timestamp_updated", nullable = false)
 	private Calendar updatedDate;
 
-	@PrePersist
-	protected void onCreate() {
-		createdDate = Calendar.getInstance();
-		updatedDate = Calendar.getInstance();
-	}
-
-	@PreUpdate
-	protected void onUpdate() {
-		updatedDate = Calendar.getInstance();
-	}
+//	@PrePersist
+//	protected void onCreate() {
+//		createdDate = Calendar.getInstance();
+//		updatedDate = Calendar.getInstance();
+//	}
+//
+//	@PreUpdate
+//	protected void onUpdate() {
+//		updatedDate = Calendar.getInstance();
+//	}
 
 	public Long getId() {
 		return id;

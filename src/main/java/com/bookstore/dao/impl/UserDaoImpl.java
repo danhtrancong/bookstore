@@ -21,29 +21,33 @@ import com.bookstore.entity.UserEntity;
 @Transactional
 public class UserDaoImpl extends AbstractDao<UserEntity> implements UserDao {
 
-    static final Logger logger = LoggerFactory.getLogger(UserDaoImpl.class);
+	static final Logger logger = LoggerFactory.getLogger(UserDaoImpl.class);
 
-    @PostConstruct
-    public void init() {
-        super.setClazz(UserEntity.class);
-    }
+	@PostConstruct
+	public void init() {
+		super.setClazz(UserEntity.class);
+	}
 
-    @Override
-    public UserEntity findByEmail(String email) {
-        logger.info("Email : {}", email);
-        CriteriaBuilder cb = em.getCriteriaBuilder();
-        CriteriaQuery<UserEntity> cq = cb.createQuery(UserEntity.class);
-        Root<UserEntity> user = cq.from(UserEntity.class);
-        cq.select(user);
-        cq.where(cb.equal(user.get("email"), email));
-        TypedQuery<UserEntity> query = em.createQuery(cq);
+	@Override
+	public UserEntity findByEmail(String email) {
+		logger.info("Email : {}", email);
+		CriteriaBuilder cb = em.getCriteriaBuilder();
+		CriteriaQuery<UserEntity> cq = cb.createQuery(UserEntity.class);
+		Root<UserEntity> user = cq.from(UserEntity.class);
+		cq.select(user);
+		cq.where(cb.equal(user.get("email"), email));
+		TypedQuery<UserEntity> query = em.createQuery(cq);
 
-        List<UserEntity> users = query.getResultList();
-        if (users == null || users.isEmpty()) {
-            return new UserEntity();
-        }
+		List<UserEntity> users = query.getResultList();
+		if (users == null || users.isEmpty()) {
+			return new UserEntity();
+		}
 
-        return users.get(0);
-    }
+		return users.get(0);
+	}
 
+	@Override
+	public UserEntity save(UserEntity user) {
+		return persist(user);
+	}
 }

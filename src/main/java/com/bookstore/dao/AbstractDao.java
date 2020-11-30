@@ -27,7 +27,7 @@ public abstract class AbstractDao<T> implements GenericDao<T> {
     }
 
     @Transactional
-    public T create(T entity) {
+    public T persist(T entity) {
         em.persist(entity);
         return entity;
     }
