@@ -1,0 +1,27 @@
+version: '2'
+services:
+  bookstore:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - dbmysql
+    restart: always
+    ports:
+      - 8080:8080
+      - 9960:9990
+      - 8787:8787
+  dbmysql:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bookstore
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    ports:
+      - 2012:3306
+volumes:
+  db_data: {}
