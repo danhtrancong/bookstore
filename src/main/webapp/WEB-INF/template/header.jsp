@@ -28,6 +28,7 @@
                 <li><a href="#about">HISTORY</a></li>
                 <li><a href="#about">MEDICAL</a></li>
                 <li><a href="#about">TRAVEL</a></li>
+                <li><a href="#about">TECHNOLOGIES</a></li>
             </ul>
 	    </div>
 	</div>

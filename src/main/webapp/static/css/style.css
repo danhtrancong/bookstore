@@ -71,7 +71,6 @@
 .header .header-bottom {
     height: 60px;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
-    background-color: #333;
 }
 .header .header-bottom .navigation-bar{
     width: 80%;
@@ -82,7 +81,6 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
   height: 100%
 }
 .header .header-bottom li {
@@ -91,16 +89,16 @@
 }
 .header .header-bottom li a {
   display: block;
-  color: white;
+  color: gray;
   text-align: center;
   padding: 20px 16px;
   text-decoration: none;
 }
 .header .header-bottom li a:hover:not(.active) {
-  background-color: #111;
+  background-color: #CCCCCC;
 }
 .active {
-  background-color: #4CAF50;
+  background-color: #CCCCCC;
   height: 100px;
 }
 
