@@ -2,9 +2,16 @@
 	padding: 0px;
 	margin: 0px;
 }
-.body {
-	background-color: #0000FF;
+body {
+	background-color: #DDDDDD;
 	height: 35px;
+}
+.body{
+    background-color: white;
+}
+.my-container {
+    padding-left: 13%;
+    padding-right: 13%;
 }
 /*HEADER*/
 .header {
@@ -67,10 +74,11 @@
 .header .col-md-2 span{
     font-size: 25px;
 }
-/*NAVIGATION*/
+/*MENU*/
 .header .header-bottom {
     height: 60px;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    background-color: white;
 }
 .header .header-bottom .navigation-bar{
     width: 80%;
@@ -95,160 +103,110 @@
   text-decoration: none;
 }
 .header .header-bottom li a:hover:not(.active) {
-  background-color: #CCCCCC;
+  background-color: #EEEEEE;
 }
 .active {
-  background-color: #CCCCCC;
+  background-color: #EEEEEE;
   height: 100px;
 }
-
-.login {
-	margin: auto;
-	width: 38.5%;
-	border: 3px solid white;
-	padding: 10px;
+/*NAVIGATION*/
+.navigation .block-information{
+    background-color: white;
+    color: gray;
+    margin-bottom: 40px;
 }
-
-.login h1 {
-	text-align: center;
+.navigation .block-information h4{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dddddd;
 }
-
-.login input[type=text] {
-	height: 50px;
-	width: 490px;
-	border: 1px solid #ebebeb;
-	margin-bottom: 35px;
-	outline: none;
-	padding-left: 10px;
+/*NAVIGATION*/
+.navigation .block-information ul{
+    list-style-type: none;
+    padding: 0px;
 }
-
-.login input[type=password] {
-	height: 50px;
-	width: 490px;
-	border: 1px solid #ebebeb;
-	margin-bottom: 15px;
-	outline: none;
-	padding-left: 10px;
+.navigation .block-information ul li {
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 20px;
+    cursor: pointer;
 }
-
-.login .loginBtn {
-	font-size: 19px;
-	height: 37px;
-	width: 30%;
-	background: #e7ab3c;
-	border: 1px solid #e7ab3c;
-	color: white;
-	outline: none;
-	margin-top: 15px;
-	margin-bottom: 10px;
+.navigation .block-information ul li a{
+    color: gray;
+    text-decoration: none;
+    padding-top: 20px;
 }
-
-/*  Register Form */
-.register-form {
-	margin: auto;
-	width: 38.5%;
-	border: 3px solid white;
-	padding: 10px;
+.navigation .block-information ul li:hover{
+    background-color: #EEEEEE;
 }
-
-.register-form h1 {
-	text-align: center;
+.navigation .block-information ul li img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid gray;
 }
-
-.register-form input[type=text] {
-	height: 50px;
-	width: 490px;
-	border: 1px solid #ebebeb;
-	margin-bottom: 35px;
-	outline: none;
-	padding-left: 10px;
+.navigation .block-information .filter {
+    padding-left: 20px;
+    padding-bottom: 10px;
 }
-
-.register-form input[type=password] {
-	height: 50px;
-	width: 490px;
-	border: 1px solid #ebebeb;
-	margin-bottom: 15px;
-	outline: none;
-	padding-left: 10px;
+.navigation .block-information input,
+.navigation .block-information label {
+    margin-bottom: 10px;
 }
-
-.register-form button {
-	font-size: 19px;
-	height: 37px;
-	width: 490px;
-	background: #e7ab3c;
-	border: 1px solid #e7ab3c;
-	color: white;
-	outline: none;
-	margin-top: 15px;
+.navigation .block-information .btn-search{
+    text-align: center;
 }
-
-/* products */
-.product-info {
-	background-color: white;
-	height: 500px;
+.navigation .block-information button{
+    height: 40px;
+    width: 80%;
+    margin-bottom: 20px;
 }
-
-.product-info .category {
-	height: 400px;
-	margin-top: 30px;
+/* HOME */
+.home {
+    height: 300px;
+    background-color: white;
+    color: gray;
 }
-
-.product-info .products {
-	height: 400px;
-	margin-top: 10px;
-	padding-left: 0px;
-	padding-right: 0px;
+.home .banner{
+    width: 100%;
+    height: 520px;
 }
-
-.product-info .products td {
-	padding-top: 20px;
-	padding-right: 20px;
-	width: 33.33%;
-	text-align: center;
-	vertical-align: text-top;
+.home .banner img{
+    width: 100%;
+    height: 520px;
 }
-
-.product-info .products .product-category {
-	padding-top: 20px;
-	font-size: 15px;
-    color: #757575;
+/* PRODUCT */
+.products{
+    margin-top: 30px;
 }
-
-.product-info .products .product-name {
-	padding-top: 10px;
-	font-weight: bold;
-	font-size: 16px;
+.products .product img{
+    width: 100%;
+    cursor: pointer;
 }
-
-.product-info .products img {
-	width: 200px;
-	height: 200px;
+.products .product h3, i{
+    margin: 5px;
 }
-
-.product-info .products .price {
-	padding-top: 10px;
-	padding-bottom: 15px;
-	color: orange;
+.products .product h4{
+    margin: 5px;
+    color: #AAAAAA;
 }
-
-.product-info .products .price del {
-	color: gray;
-	/*  text-decoration: line-through; */
+.products ul {
+    list-style-type: none;
+    padding-left: 10px;
 }
-
-.product-info .category ul {
-	list-style-type: none;
-	padding-left: 0px;
-	margin-top: 20px;
+.products ul li {
+    width: 23%;
+    float: left;
+    margin-right: 15px;
+    height: 325px;
 }
-
-.product-info .category ul li {
-	height: 25px;
-}
-
-.product-info .category h3 {
-	color: black;
-	font-weight: 600;
+/* FOOTER */
+.footer{
+    background-color: #555555;
+    height: 40px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 30px;
 }

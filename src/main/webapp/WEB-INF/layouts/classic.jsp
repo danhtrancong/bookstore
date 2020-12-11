@@ -31,8 +31,9 @@
 	<div>
 		<tiles:insertAttribute name="header" />
 	</div>
-	<div>
-		<tiles:insertAttribute name="body" />
+	<div class="my-container row">
+	    <div class="col-md-3"><tiles:insertAttribute name="navigation" /></div>
+	    <div class="col-md-9 body"><tiles:insertAttribute name="body" /></div>
 	</div>
 	<div>
 		<tiles:insertAttribute name="footer" />

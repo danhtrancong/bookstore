@@ -1,3 +1,1 @@
-<div>
- @Ronaldo lima
-</div>
+<div class="footer">Created by Nhut.Nguyen, since: 12-2020</div>

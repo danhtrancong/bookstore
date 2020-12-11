@@ -3,7 +3,7 @@
 <div class="header">
 	<div class="header-top">
 	    <div class="row">
-	        <div class="col-md-4"><img alt="Logo" src="<c:url value="/static/asset/logo.png"  />" /></div>
+	        <div class="col-md-4"><img alt="Logo" src="<c:url value="/static/asset/logo.png"  />"></div>
 	        <div class="col-md-5">
                 <div class="container h-100">
                       <div class="d-flex justify-content-center h-100">
