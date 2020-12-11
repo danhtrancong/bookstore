@@ -18,5 +18,17 @@
 	        <div class="col-md-2"><span><i class="glyphicon glyphicon-user"></i></span></div>
 	    </div>
 	</div>
-	<div class="header-bottom"></div>
+	<div class="header-bottom">
+	    <div class="navigation-bar">
+	        <ul>
+                <li><a class="active" href="#home">HOME</a></li>
+                <li><a href="#news">COMICS & GRAPHIC</a></li>
+                <li><a href="#contact">ART & PHOTOGRAPHY</a></li>
+                <li><a href="#about">FOOD & COOKBOOKS</a></li>
+                <li><a href="#about">HISTORY</a></li>
+                <li><a href="#about">MEDICAL</a></li>
+                <li><a href="#about">TRAVEL</a></li>
+            </ul>
+	    </div>
+	</div>
 </div>

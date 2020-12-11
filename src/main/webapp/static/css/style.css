@@ -2,6 +2,10 @@
 	padding: 0px;
 	margin: 0px;
 }
+.body {
+	background-color: #0000FF;
+	height: 35px;
+}
 /*HEADER*/
 .header {
     height: 200px;
@@ -63,37 +67,41 @@
 .header .col-md-2 span{
     font-size: 25px;
 }
+/*NAVIGATION*/
 .header .header-bottom {
     height: 60px;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    background-color: #333;
 }
-
-.navigation {
-	background-color: #252525;
-	height: 55px;
-	text-align: center;
+.header .header-bottom .navigation-bar{
+    width: 80%;
+    margin: auto;
 }
-
-.navigation  ul li {
-	display: inline;
-	margin-right: 15px;
+.header .header-bottom ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  height: 100%
 }
-
-.navigation a {
-	color: white;
-	font-size: 18px;
+.header .header-bottom li {
+  float: left;
+  height: 100px;
 }
-
-.navigation ul li div {
-	width: 30px;
-	height: 5px;
-	background-color: white;
-	margin: 6px 0;
+.header .header-bottom li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
 }
-
-.body {
-	background-color: #0000FF;
-	height: 35px;
+.header .header-bottom li a:hover:not(.active) {
+  background-color: #111;
+}
+.active {
+  background-color: #4CAF50;
+  height: 100px;
 }
 
 .login {
