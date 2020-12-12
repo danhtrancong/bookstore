@@ -74,6 +74,10 @@ body {
 .header .col-md-2 span{
     font-size: 25px;
 }
+.header .header-top a{
+    color: white;
+    text-decoration: none;
+}
 /*MENU*/
 .header .header-bottom {
     height: 60px;
@@ -201,6 +205,39 @@ body {
     margin-right: 15px;
     height: 325px;
 }
+.product:hover{
+    border: 1px solid #AAAAAA;
+}
+/* LOGIN */
+.login{
+    background: url(../static/asset/login-background.jpg);
+    height: 96%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    color: white;
+}
+.login form{
+    width: 50%;
+    margin: auto;
+}
+.login input{
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    color: gray;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+.login .button{
+    width: 48%;
+    height: 45px;
+    color: white;
+    font-size: 20;
+}
 /* FOOTER */
 .footer{
     background-color: #555555;
@@ -209,4 +246,5 @@ body {
     text-align: center;
     padding-top: 10px;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
