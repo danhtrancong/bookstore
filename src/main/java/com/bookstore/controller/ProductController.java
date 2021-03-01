@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bookstore.service.ProductService;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 @RequestMapping("/product")
 public class ProductController {

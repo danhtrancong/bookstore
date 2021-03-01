@@ -23,6 +23,8 @@ public class ProductEntity extends BaseEntity {
 	@Column(columnDefinition="TEXT")
 	private String summary;
 
+	private boolean isBestSeller;
+
 	@ManyToOne
 	@JoinColumn(name = "category_id", nullable = false)
 	// category used in mappedBy
@@ -88,5 +90,11 @@ public class ProductEntity extends BaseEntity {
 		this.summary = summary;
 	}
 
-	
+	public boolean isBestSeller() {
+		return isBestSeller;
+	}
+
+	public void setBestSeller(boolean bestSeller) {
+		isBestSeller = bestSeller;
+	}
 }

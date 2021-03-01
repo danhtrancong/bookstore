@@ -36,6 +36,7 @@ public class ProductMapper {
 		product.setOriginalPrice(c.getOriginalPrice());
 		product.setSallingPrice(c.getSallingPrice());
 		product.setSummary(c.getSummary());
+//		product.setBestSeller
 		return product;
 	}
 
