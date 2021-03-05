@@ -1,17 +1,26 @@
 package com.bookstore.controller;
 
+import com.bookstore.dto.CommonDataDTO;
+import com.bookstore.service.CategoryService;
+import com.bookstore.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class BookStoreController {
+	@Autowired
+	ProductService productService;
+	CategoryService categoryService;
 
 //	@RequestMapping(value = { "/home" }, method = RequestMethod.GET)
 //	public String homePage(Model model) {
@@ -39,15 +48,17 @@ public class BookStoreController {
 	}
 
 
-    @RequestMapping(value = { "/home" }, method = RequestMethod.GET)
-    public String getCategories(Model model){
-        List<String> categories = new ArrayList<>();
-        categories.add("Java");
-        categories.add("C++");
-        categories.add("Comic");
-        categories.add("Novel");
-        model.addAttribute("categories", categories);
-        return "homePage";
-    }
+	@GetMapping(value =  { "/home"})
+	public String getCommonData(Model model){
+		CommonDataDTO commonDataDTO = new CommonDataDTO();
+		// TODO: the list of categories will be queried from database
+
+		commonDataDTO.setCategories(commonDataDTO.getCategories());
+		// TODO: the list of productsbestseller will be queried form db
+		commonDataDTO.getProductBestSeller();
+
+		model.addAttribute("commonData", commonDataDTO);
+		return "homePage";
+	}
 
 }

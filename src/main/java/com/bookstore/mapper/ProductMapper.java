@@ -9,35 +9,35 @@ import com.bookstore.entity.ProductEntity;
 
 public class ProductMapper {
 
-	public static CategoryDTO mapFromEntity(CategoryEntity c) {
+    public static CategoryDTO mapFromEntity(CategoryEntity c) {
 
-		CategoryDTO categoryDTO = new CategoryDTO();
-		categoryDTO.setId(c.getId());
-		categoryDTO.setName(c.getName());
-		return categoryDTO;
-	}
+        CategoryDTO categoryDTO = new CategoryDTO();
+        categoryDTO.setId(c.getId());
+        categoryDTO.setName(c.getName());
+        return categoryDTO;
+    }
 
-	public static LanguageDTO mapFromEntity(LanguageEntity c) {
+    public static LanguageDTO mapFromEntity(LanguageEntity c) {
 
-		LanguageDTO languageDTO = new LanguageDTO();
-		languageDTO.setId(c.getId());
-		languageDTO.setName(c.getName());
-		return languageDTO;
-	}
+        LanguageDTO languageDTO = new LanguageDTO();
+        languageDTO.setId(c.getId());
+        languageDTO.setName(c.getName());
+        return languageDTO;
+    }
 
-	public static ProductDTO mapFromEntity(ProductEntity c) {
+    public static ProductDTO mapFromEntity(ProductEntity c) {
 
-		ProductDTO product = new ProductDTO();
-		product.setId(c.getId());
-		product.setName(c.getName());
-		product.setCategory(c.getCategory().getName());
-		product.setLanguage(c.getLanguage().getName());
-		product.setImageUrl(c.getImageUrl());
-		product.setOriginalPrice(c.getOriginalPrice());
-		product.setSallingPrice(c.getSallingPrice());
-		product.setSummary(c.getSummary());
-//		product.setBestSeller
-		return product;
-	}
+        ProductDTO product = new ProductDTO();
+        product.setId(c.getId());
+        product.setName(c.getName());
+        product.setCategory(c.getCategory().getName());
+        product.setLanguage(c.getLanguage().getName());
+        product.setImageUrl(c.getImageUrl());
+        product.setOriginalPrice(c.getOriginalPrice());
+        product.setSallingPrice(c.getSallingPrice());
+        product.setSummary(c.getSummary());
+        product.setBestSeller(c.isBestSeller());
+        return product;
+    }
 
 }

@@ -4,26 +4,13 @@
     <div class="block-information">
         <h4>BEST SELLER</h4>
         <ul>
-            <li><a href="#">
-                <span><img alt="Product" src="<c:url value="/static/asset/book.jpg" />"></span></a>
-                <span>Java Programming</span>
-            </li>
-            <li>
-                <span><img alt="Product" src="<c:url value="/static/asset/book.jpg" />"></span></a>
-                <span>C# Programming</span>
-            </li>
-            <li>
-                <span><img alt="Product" src="<c:url value="/static/asset/book.jpg" />"></span></a>
-                <span>Database</span>
-            </li>
-            <li>
-                <span><img alt="Product" src="<c:url value="/static/asset/book.jpg" />"></span></a>
-                <span>HTM, CSS & JavaScript</span>
-            </li>
-            <li>
-                <span><img alt="Product" src="<c:url value="/static/asset/book.jpg" />"></span></a>
-                <span>Algothirm</span>
-            </li>
+<%--            <li><a href="#">--%>
+<%--                <c:forEach items="${productsbestseller.products}" var="bestseller">--%>
+<%--                <span><img alt="Product" src="<c:url value="/static/asset/book.jpg" />"></span></a>--%>
+<%--            <li><c:out value="${bestseller.name}"></c:out></li>--%>
+<%--            </c:forEach>--%>
+<%--            </li>--%>
+
         </ul>
     </div>
     <div class="block-information">

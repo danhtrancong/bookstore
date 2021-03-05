@@ -6,8 +6,10 @@ import com.bookstore.entity.ProductEntity;
 
 public interface ProductDao {
 
-	ProductEntity getProductById(long id);
+    ProductEntity getProductById(long id);
 
-	List<ProductEntity> getProducts();
+    List<ProductEntity> getProducts();
+
+    List<ProductEntity> getProductsByBestSeller();
 
 }

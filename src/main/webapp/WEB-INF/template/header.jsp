@@ -23,7 +23,7 @@
 	    <div class="navigation-bar">
 	        <ul>
                 <li><a class="active" href="http://localhost:8080/bookstore/home">HOME</a></li>
-                <c:forEach items="${categories}" var="category">
+                <c:forEach items="${commonData}" var="category">
                 <li><a href="#news">${category}</a></li>
                 </c:forEach>
 

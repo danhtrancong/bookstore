@@ -9,4 +9,6 @@ public interface ProductService {
 
 	ProductsInfoDTO getProduct(Long categoryId);
 
+	ProductDTO getProductsBestSeller (boolean isBestSeller);
+
 }

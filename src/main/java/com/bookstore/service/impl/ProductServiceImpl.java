@@ -33,7 +33,7 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public ProductsInfoDTO getProduct(Long categoryId) {
-		List<CategoryEntity> categories = categoryDao.getCategories();
+		List<CategoryEntity> categories = categoryDao.getAll();
 		List<LanguageEntity> languages = languageDao.getLanguages();
 		List<ProductEntity> productsEntity;
 		if (categoryId == null) {
@@ -61,6 +61,12 @@ public class ProductServiceImpl implements ProductService {
 		productDTO.getLanguages().addAll(languagesDTO);
 		productDTO.getProducts().addAll(products);
 		return productDTO;
+	}
+
+	@Override
+	public ProductDTO getProductsBestSeller(boolean isBestSeller) {
+		List<ProductEntity> productDTO = productDao.getProductsByBestSeller();
+		return ProductMapper.mapFromEntity((ProductEntity) productDTO);
 	}
 
 	@Override

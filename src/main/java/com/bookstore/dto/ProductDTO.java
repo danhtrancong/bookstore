@@ -13,6 +13,7 @@ public class ProductDTO {
 	private String category;
 	private String language;
 	private String summary;
+	private boolean isBestSeller;
 
 	public Long getId() {
 		return id;
@@ -78,4 +79,11 @@ public class ProductDTO {
 		this.summary = summary;
 	}
 
+	public boolean isBestSeller() {
+		return isBestSeller;
+	}
+
+	public void setBestSeller(boolean bestSeller) {
+		isBestSeller = bestSeller;
+	}
 }

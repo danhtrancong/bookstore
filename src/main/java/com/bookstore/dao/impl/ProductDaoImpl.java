@@ -8,6 +8,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
+import com.bookstore.entity.UserEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -34,6 +35,17 @@ public class ProductDaoImpl extends AbstractDao<ProductEntity> implements Produc
 		CriteriaQuery<ProductEntity> cq = cb.createQuery(ProductEntity.class);
 		Root<ProductEntity> product = cq.from(ProductEntity.class);
 		cq.select(product);
+		TypedQuery<ProductEntity> query = em.createQuery(cq);
+		List<ProductEntity> products = query.getResultList();
+		return products;
+	}
+	@Override
+	public List<ProductEntity> getProductsByBestSeller(){
+		CriteriaBuilder cb = em.getCriteriaBuilder();
+		CriteriaQuery<ProductEntity> cq = cb.createQuery(ProductEntity.class);
+		Root<ProductEntity> product = cq.from(ProductEntity.class);
+		cq.select(product);
+		cq.where(cb.equal(product.get("isBestSeller"), 1));
 		TypedQuery<ProductEntity> query = em.createQuery(cq);
 		List<ProductEntity> products = query.getResultList();
 		return products;
