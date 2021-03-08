@@ -9,7 +9,7 @@ public class CommonDataDTO {
 
     List<ProductDTO> productBestSeller = new ArrayList<>();
 
-    public List<CategoryDTO> getCategories() {
+    public List<CategoryDTO> getCategories(List<CategoryDTO> categoryDTO) {
         return categories;
     }
 
