@@ -81,7 +81,7 @@ public class AuthController {
 		if (userDTO.getFullName().isEmpty()) {
 			errorMessages.put("fullName", "Please type Name");
 		}
-		if (userDTO.getPhonNumber().isEmpty()) {
+		if (userDTO.getPhoneNumber().isEmpty()) {
 			errorMessages.put("phoneNumber", "Please type Phone Number");
 		}
 		if (userDTO.getPassword().isEmpty()) {

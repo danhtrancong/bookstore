@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ page isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="header">
 	<div class="header-top">
@@ -21,14 +22,10 @@
 	<div class="header-bottom">
 	    <div class="navigation-bar">
 	        <ul>
-                <li><a class="active" href="http://localhost:8080/bookstore/home">HOME</a></li>
-                <li><a href="#news">COMICS & GRAPHIC</a></li>
-                <li><a href="#contact">ART & PHOTOGRAPHY</a></li>
-                <li><a href="#about">FOOD & COOKBOOKS</a></li>
-                <li><a href="#about">HISTORY</a></li>
-                <li><a href="#about">MEDICAL</a></li>
-                <li><a href="#about">TRAVEL</a></li>
-                <li><a href="#about">TECHNOLOGIES</a></li>
+                <li><a class="active" href="http://localhost:8080/bookstore/home">Home</a></li>
+                <c:forEach items="${commonData.categories}" var="category">
+                    <li><a href="#"><c:out value="${category.name}" /></a></li>
+                </c:forEach>
             </ul>
 	    </div>
 	</div>

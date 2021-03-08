@@ -2,7 +2,7 @@ package com.bookstore.dto;
 
 public class UserDTO {
 	private String fullName;
-	private String phonNumber;
+	private String phoneNumber;
 	private String email;
 	private String password;
 	private String confirmPassword;
@@ -15,12 +15,12 @@ public class UserDTO {
 		this.fullName = fullName;
 	}
 
-	public String getPhonNumber() {
-		return phonNumber;
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 
-	public void setPhonNumber(String phonNumber) {
-		this.phonNumber = phonNumber;
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	public String getEmail() {

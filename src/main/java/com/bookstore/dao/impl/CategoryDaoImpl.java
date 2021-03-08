@@ -29,7 +29,7 @@ public class CategoryDaoImpl extends AbstractDao<CategoryEntity> implements Cate
 	}
 
 	@Override
-	public List<CategoryEntity> getCategories() {
+	public List<CategoryEntity> getAll() {
 		CriteriaBuilder cb = em.getCriteriaBuilder();
 		CriteriaQuery<CategoryEntity> cq = cb.createQuery(CategoryEntity.class);
 		Root<CategoryEntity> category = cq.from(CategoryEntity.class);

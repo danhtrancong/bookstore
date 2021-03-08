@@ -7,6 +7,9 @@ import com.bookstore.entity.CategoryEntity;
 import com.bookstore.entity.LanguageEntity;
 import com.bookstore.entity.ProductEntity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ProductMapper {
 
 	public static CategoryDTO mapFromEntity(CategoryEntity c) {
@@ -37,6 +40,18 @@ public class ProductMapper {
 		product.setSallingPrice(c.getSallingPrice());
 		product.setSummary(c.getSummary());
 		return product;
+	}
+
+	public static List<ProductDTO> mapFromEntities(List<ProductEntity> productEntities) {
+		List<ProductDTO> productsDTO = new ArrayList<>();
+		for (ProductEntity category: productEntities) {
+			ProductDTO productDTO = new ProductDTO();
+			productDTO.setId(category.getId());
+			productDTO.setName(category.getName());
+			productsDTO.add(productDTO);
+		}
+
+		return productsDTO;
 	}
 
 }
