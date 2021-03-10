@@ -38,7 +38,19 @@ public class ProductDaoImpl extends AbstractDao<ProductEntity> implements Produc
 		List<ProductEntity> products = query.getResultList();
 		return products;
 	}
-	
+
+	@Override
+	public List<ProductEntity> getBestSellings() {
+		CriteriaBuilder cb = em.getCriteriaBuilder();
+		CriteriaQuery<ProductEntity> cq = cb.createQuery(ProductEntity.class);
+		Root<ProductEntity> product = cq.from(ProductEntity.class);
+		cq.select(product);
+		TypedQuery<ProductEntity> query = em.createQuery(cq);
+		cq.where(cb.equal(product.get("isBestSelling"),true ));
+		List<ProductEntity> products = query.getResultList();
+		return products;
+	}
+
 	@Override
 	public ProductEntity getProductById(long id) {
 		return findOne(id);

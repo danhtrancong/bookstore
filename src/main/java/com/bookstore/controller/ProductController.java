@@ -24,10 +24,4 @@ public class ProductController {
 		return "productDetail";
 	}
 
-	@RequestMapping(method = RequestMethod.GET)
-	public String showProductsView(Model model, @RequestParam("categoryId") Long categoryId) {
-		model.addAttribute("productsView", productService.getProduct(categoryId));
-		return "productsView";
-	}
-
 }

@@ -1,8 +1,6 @@
 package com.bookstore.controller;
 
-import com.bookstore.dto.CategoryDTO;
 import com.bookstore.dto.CommonDataDTO;
-import com.bookstore.dto.ProductDTO;
 import com.bookstore.mapper.CategoryMapper;
 import com.bookstore.mapper.ProductMapper;
 import com.bookstore.service.CategoryService;
@@ -31,8 +29,7 @@ public class BookStoreController {
         commonDataDTO.setCategories(CategoryMapper.mapFromEntities(categoryService.getAll()));
 
         // TODO: List of best selling products
-        //List<ProductDTO> productssDTO = ProductMapper.mapFromEntities(productService.getBestSellers());
-        //commonDataDTO.setBestSellingProducts();
+        commonDataDTO.setBestSellingProducts(ProductMapper.mapFromEntities(productService.getBestSellings()));
         model.addAttribute("commonData", commonDataDTO);
         return "homePage";
     }

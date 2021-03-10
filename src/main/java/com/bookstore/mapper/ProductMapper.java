@@ -12,22 +12,6 @@ import java.util.List;
 
 public class ProductMapper {
 
-	public static CategoryDTO mapFromEntity(CategoryEntity c) {
-
-		CategoryDTO categoryDTO = new CategoryDTO();
-		categoryDTO.setId(c.getId());
-		categoryDTO.setName(c.getName());
-		return categoryDTO;
-	}
-
-	public static LanguageDTO mapFromEntity(LanguageEntity c) {
-
-		LanguageDTO languageDTO = new LanguageDTO();
-		languageDTO.setId(c.getId());
-		languageDTO.setName(c.getName());
-		return languageDTO;
-	}
-
 	public static ProductDTO mapFromEntity(ProductEntity c) {
 
 		ProductDTO product = new ProductDTO();
@@ -44,10 +28,11 @@ public class ProductMapper {
 
 	public static List<ProductDTO> mapFromEntities(List<ProductEntity> productEntities) {
 		List<ProductDTO> productsDTO = new ArrayList<>();
-		for (ProductEntity category: productEntities) {
+		for (ProductEntity productEntity: productEntities) {
 			ProductDTO productDTO = new ProductDTO();
-			productDTO.setId(category.getId());
-			productDTO.setName(category.getName());
+			productDTO.setId(productEntity.getId());
+			productDTO.setImageUrl(productEntity.getImageUrl());
+			productDTO.setName(productEntity.getName());
 			productsDTO.add(productDTO);
 		}
 
