@@ -25,14 +25,19 @@ public class ProductServiceImpl implements ProductService {
     private ProductDao productDao;
 
     @Override
-    public ProductDTO getProductById(long id) {
-        ProductEntity productDTO = productDao.getProductById(id);
-        return ProductMapper.mapFromEntity(productDTO);
+    public ProductEntity getProductById(long id) {
+        ProductEntity productEntity = productDao.getProductById(id);
+        return productEntity;
     }
 
     @Override
     public List<ProductEntity> getBestSellings() {
         return productDao.getBestSellings();
+    }
+
+    @Override
+    public List<ProductEntity> getAll() {
+        return productDao.getAll();
     }
 
 }

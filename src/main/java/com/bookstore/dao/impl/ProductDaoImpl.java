@@ -29,7 +29,7 @@ public class ProductDaoImpl extends AbstractDao<ProductEntity> implements Produc
 	}
 
 	@Override
-	public List<ProductEntity> getProducts() {
+	public List<ProductEntity> getAll() {
 		CriteriaBuilder cb = em.getCriteriaBuilder();
 		CriteriaQuery<ProductEntity> cq = cb.createQuery(ProductEntity.class);
 		Root<ProductEntity> product = cq.from(ProductEntity.class);

@@ -16,15 +16,12 @@ public class CategoryMapper {
 		return categoryDTO;
 	}
 	public static List<CategoryDTO> mapFromEntities(List<CategoryEntity> categoryEntities) {
-		List<CategoryDTO> categoriesDTO = new ArrayList<>();
+		List<CategoryDTO> categoryDTOs = new ArrayList<>();
 		for (CategoryEntity category: categoryEntities) {
-			CategoryDTO categoryDTO = new CategoryDTO();
-			categoryDTO.setId(category.getId());
-			categoryDTO.setName(category.getName());
-			categoriesDTO.add(categoryDTO);
+			categoryDTOs.add(mapFromEntity(category));
 		}
 
-		return categoriesDTO;
+		return categoryDTOs;
 	}
 
 }

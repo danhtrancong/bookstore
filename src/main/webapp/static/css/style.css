@@ -190,27 +190,48 @@ body {
 }
 .products .product img{
     width: 100%;
+    height: 200px;
     cursor: pointer;
 }
 .products .product h3, i{
     margin: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .products .product h4{
     margin: 5px;
     color: #AAAAAA;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .products ul {
     list-style-type: none;
     padding-left: 10px;
 }
 .products ul li {
-    width: 23%;
+    width: 22%;
     float: left;
     margin-right: 15px;
     height: 325px;
 }
 .product:hover{
     border: 1px solid #AAAAAA;
+}
+/* PRODUCT-DETAIL */
+.product-detail{
+    margin-top: 30px;
+}
+.product-detail img{
+    height: 350px;
+}
+.product-detail div{
+    margin-bottom: 10px;
+}
+/* create-product-detail */
+.create-product-detail{
+    margin-top: 10px;
 }
 /* LOGIN */
 .login{

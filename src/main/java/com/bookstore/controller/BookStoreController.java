@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.List;
-
 @Controller
 public class BookStoreController {
 
@@ -27,10 +25,9 @@ public class BookStoreController {
     public String homePage(Model model) {
         CommonDataDTO commonDataDTO = new CommonDataDTO();
         commonDataDTO.setCategories(CategoryMapper.mapFromEntities(categoryService.getAll()));
-
-        // TODO: List of best selling products
         commonDataDTO.setBestSellingProducts(ProductMapper.mapFromEntities(productService.getBestSellings()));
         model.addAttribute("commonData", commonDataDTO);
+        model.addAttribute("allProducts", ProductMapper.mapFromEntities(productService.getAll()));
         return "homePage";
     }
 
