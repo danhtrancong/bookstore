@@ -1,10 +1,11 @@
 <%@ page isELIgnored="false"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 
 <div class="create-product">
 	<div class="col-md-9 create-product-detail">
-	        <form action = "/bookstore/product/save-product" modelAttribute="productDetail" method='POST'>
+	            <form:form method="post" modelAttribute="product" action="save" enctype="multipart/form-data">
                      <table>
                          <tr>
                             <td>id: </td>
@@ -27,6 +28,10 @@
                             <td><input type="text" name="imageUrl" /></td>
                         </tr>
                         <tr>
+                            <td>File: </td>
+                            <td><input type="file" name="file" /></td>
+                        </tr>
+                        <tr>
                             <td>category: </td>
                             <td><input type="text" name="category" /></td>
                         </tr>
@@ -45,7 +50,7 @@
                             </td>
                         </tr>
                      </table>
-                  </form>
+                  </form:form>
 	</div>
 	<div class="col-md-3 right-ads"></div>
 </div>

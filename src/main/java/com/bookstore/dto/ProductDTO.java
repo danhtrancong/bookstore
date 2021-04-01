@@ -2,6 +2,8 @@ package com.bookstore.dto;
 
 import java.math.BigDecimal;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.bookstore.entity.CategoryEntity;
 
 public class ProductDTO {
@@ -13,6 +15,7 @@ public class ProductDTO {
 	private String category;
 	private String language;
 	private String summary;
+	private MultipartFile file;
 
 	public Long getId() {
 		return id;
@@ -78,4 +81,13 @@ public class ProductDTO {
 		this.summary = summary;
 	}
 
+	public MultipartFile getFile()
+	{
+		return file;
+	}
+
+	public void setFile(MultipartFile file)
+	{
+		this.file = file;
+	}
 }

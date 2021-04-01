@@ -42,6 +42,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.antMatchers("/edit/**").access("hasRole('ADMIN')")
 				.and().formLogin().loginPage("/auth/login").loginProcessingUrl("/api-login").defaultSuccessUrl("/home", true).usernameParameter("email").passwordParameter("password")
 				.and().csrf().and().exceptionHandling().accessDeniedPage("/access-denied");
+		http.csrf().disable();
 	}
 
 	@Bean
