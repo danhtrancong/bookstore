@@ -52,6 +52,12 @@ public class ProductDaoImpl extends AbstractDao<ProductEntity> implements Produc
 	}
 
 	@Override
+	public ProductEntity saveProduct(ProductEntity product) {
+		product.onCreate();
+		return persist(product);
+	}
+
+	@Override
 	public ProductEntity getProductById(long id) {
 		return findOne(id);
 	}

@@ -1,15 +1,12 @@
 <%@ page isELIgnored="false"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 
 <div class="create-product">
 	<div class="col-md-9 create-product-detail">
-	        <form action = "/bookstore/product/save-product" modelAttribute="productDetail" method='POST'>
+	        <form:form action = "save" modelAttribute="productDetail" method='POST' >
                      <table>
-                         <tr>
-                            <td>id: </td>
-                            <td><input type="text" name="id" /></td>
-                        </tr>
                         <tr>
                            <td>Book Name: </td>
                            <td><input type="text" name="name" /></td>
@@ -24,15 +21,27 @@
                         </tr>
                         <tr>
                             <td>Book image: </td>
-                            <td><input type="text" name="imageUrl" /></td>
+                            <td><input type="text" name="imageUrl"></td>
                         </tr>
                         <tr>
                             <td>category: </td>
-                            <td><input type="text" name="category" /></td>
+                            <td>
+                                <select name='category'>
+                                    <c:forEach items="${commonData.categories}" var="category">
+                                        <option value="${category.id}">${category.name}</option>
+                                    </c:forEach>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td>Language: </td>
-                            <td><input type="text" name="language" /></td>
+                            <td>
+                                <select name='language'>
+                                    <c:forEach items="${commonData.languages}" var="language">
+                                        <option value="${language.id}">${language.name}</option>
+                                    </c:forEach>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td>Summary: </td>
@@ -45,7 +54,7 @@
                             </td>
                         </tr>
                      </table>
-                  </form>
+                  </form:form>
 	</div>
 	<div class="col-md-3 right-ads"></div>
 </div>

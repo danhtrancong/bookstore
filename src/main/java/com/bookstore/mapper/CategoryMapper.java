@@ -15,6 +15,7 @@ public class CategoryMapper {
 		categoryDTO.setName(c.getName());
 		return categoryDTO;
 	}
+
 	public static List<CategoryDTO> mapFromEntities(List<CategoryEntity> categoryEntities) {
 		List<CategoryDTO> categoryDTOs = new ArrayList<>();
 		for (CategoryEntity category: categoryEntities) {

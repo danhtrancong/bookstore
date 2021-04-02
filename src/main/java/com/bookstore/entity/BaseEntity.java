@@ -29,15 +29,15 @@ public class BaseEntity implements Serializable {
 	private Calendar updatedDate;
 
 //	@PrePersist
-//	protected void onCreate() {
-//		createdDate = Calendar.getInstance();
-//		updatedDate = Calendar.getInstance();
-//	}
-//
+	public void onCreate() {
+		createdDate = Calendar.getInstance();
+		updatedDate = Calendar.getInstance();
+	}
+
 //	@PreUpdate
-//	protected void onUpdate() {
-//		updatedDate = Calendar.getInstance();
-//	}
+	public void onUpdate() {
+		updatedDate = Calendar.getInstance();
+	}
 
 	public Long getId() {
 		return id;

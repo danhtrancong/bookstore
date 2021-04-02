@@ -2,7 +2,7 @@ package com.bookstore.dto;
 
 import java.math.BigDecimal;
 
-import com.bookstore.entity.CategoryEntity;
+import org.springframework.web.multipart.MultipartFile;
 
 public class ProductDTO {
 	private Long id;
@@ -78,4 +78,9 @@ public class ProductDTO {
 		this.summary = summary;
 	}
 
+	@Override
+	public String toString() {
+		return String.format(id + " + " + name+ " + " + sallingPrice+" + " + originalPrice+
+				" + " + category+ " + " + language+ " + " + summary);
+	}
 }

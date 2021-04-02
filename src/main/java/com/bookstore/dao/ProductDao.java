@@ -11,4 +11,6 @@ public interface ProductDao {
     List<ProductEntity> getAll();
 
     List<ProductEntity> getBestSellings();
+
+    ProductEntity saveProduct(ProductEntity product);
 }

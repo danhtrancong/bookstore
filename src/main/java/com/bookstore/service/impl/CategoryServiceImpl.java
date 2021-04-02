@@ -5,6 +5,7 @@ import com.bookstore.entity.CategoryEntity;
 import com.bookstore.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service("categoryService")
@@ -16,4 +17,10 @@ public class CategoryServiceImpl implements CategoryService {
     public List<CategoryEntity> getAll() {
         return categoryDao.getAll();
     }
+
+    @Override
+    public CategoryEntity getCategoryByName(String name) {
+        return categoryDao.getCategoryByName(name);
+    }
+
 }
