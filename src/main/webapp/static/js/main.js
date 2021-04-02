@@ -1,10 +1,5 @@
 /*  ---------------------------------------------------
-    Template Name: Fashi
-    Description: Fashi eCommerce HTML Template
-    Author: Colorlib
-    Author URI: https://colorlib.com/
-    Version: 1.0
-    Created: Colorlib
+
 ---------------------------------------------------------  */
 
 'use strict';
@@ -248,3 +243,7 @@
 	});
 
 })(jQuery);
+
+
+
+

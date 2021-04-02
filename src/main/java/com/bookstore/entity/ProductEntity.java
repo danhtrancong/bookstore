@@ -19,6 +19,8 @@ public class ProductEntity extends BaseEntity {
 	private BigDecimal originalPrice;
 
 	private String imageUrl;
+
+	private Boolean isBestSeller;
 	
 	@Column(columnDefinition="TEXT")
 	private String summary;
@@ -88,5 +90,11 @@ public class ProductEntity extends BaseEntity {
 		this.summary = summary;
 	}
 
-	
+	public Boolean getBestSeller() {
+		return isBestSeller;
+	}
+
+	public void setBestSeller(Boolean bestSeller) {
+		isBestSeller = bestSeller;
+	}
 }

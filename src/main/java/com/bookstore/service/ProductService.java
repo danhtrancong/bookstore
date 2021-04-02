@@ -7,10 +7,11 @@ import com.bookstore.entity.ProductEntity;
 import java.util.List;
 
 public interface ProductService {
-	List <ProductDTO> getAll();
+
+	List<ProductEntity> getAll();
 	List <ProductEntity> getBestSellers();
+
 	ProductDTO getProductById(long id);
-
 	ProductsInfoDTO getProduct(Long categoryId);
-
+	ProductEntity saveProduct(ProductEntity productEntity, Long categoryId, Long languageId);
 }

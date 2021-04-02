@@ -19,6 +19,7 @@
     <script src="<c:url value="/js/jquery.slicknav.js"/>"></script>
     <script src="<c:url value="/js/owl.carousel.min.js"/>"></script>
     <script src="<c:url value="/js/main.js"/>"></script>
+    <script src="<c:url value="/js/custom.js"/>"></script>
 
     <link href="<c:url value="/css/bootstrap-4.4.1/bootstrap.min.css" />" rel="stylesheet">
     <link href="<c:url value="/css/bootstrap-4.4.1/bootstrap-glyphicons.css" />" rel="stylesheet">

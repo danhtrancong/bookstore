@@ -8,6 +8,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
+import com.bookstore.entity.CategoryEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -21,21 +22,42 @@ import com.bookstore.entity.LanguageEntity;
 @Transactional
 public class LanguageDaoImpl extends AbstractDao<LanguageEntity> implements LanguageDao {
 
-	static final Logger logger = LoggerFactory.getLogger(LanguageDaoImpl.class);
+    static final Logger logger = LoggerFactory.getLogger(LanguageDaoImpl.class);
 
-	@PostConstruct
-	public void init() {
-		super.setClazz(LanguageEntity.class);
-	}
+    @PostConstruct
+    public void init() {
+        super.setClazz(LanguageEntity.class);
+    }
 
-	@Override
-	public List<LanguageEntity> getLanguages() {
-		CriteriaBuilder cb = em.getCriteriaBuilder();
-		CriteriaQuery<LanguageEntity> cq = cb.createQuery(LanguageEntity.class);
-		Root<LanguageEntity> language = cq.from(LanguageEntity.class);
-		cq.select(language);
-		TypedQuery<LanguageEntity> query = em.createQuery(cq);
-		List<LanguageEntity> categories = query.getResultList();
-		return categories;
-	}
+    @Override
+    public List<LanguageEntity> getLanguages() {
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<LanguageEntity> cq = cb.createQuery(LanguageEntity.class);
+        Root<LanguageEntity> language = cq.from(LanguageEntity.class);
+        cq.select(language);
+        TypedQuery<LanguageEntity> query = em.createQuery(cq);
+        List<LanguageEntity> categories = query.getResultList();
+        return categories;
+    }
+
+    @Override
+    public LanguageEntity getLanguagesByName(String nameLanguage) {
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<LanguageEntity> cq = cb.createQuery(LanguageEntity.class);
+        Root<LanguageEntity> language = cq.from(LanguageEntity.class);
+        cq.select(language);
+        cq.where(cb.equal(language.get("name"), nameLanguage));
+        TypedQuery<LanguageEntity> query = em.createQuery(cq);
+        List<LanguageEntity> languageEntity = query.getResultList();
+        if (languageEntity == null || languageEntity.isEmpty()) {
+            return new LanguageEntity();
+        }
+        return languageEntity.get(0);
+    }
+
+    @Override
+    public LanguageEntity getLanguagesById(Long languageId) {
+        return findOne(languageId);
+    }
+
 }

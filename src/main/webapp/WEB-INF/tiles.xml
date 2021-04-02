@@ -60,5 +60,11 @@
 		<put-attribute name="title" value="Product Detail" />
 		<put-attribute name="body" value="/WEB-INF/views/product-detail.jsp" />
 	</definition>
+
+	<!-- Add Product Page -->
+	<definition name="addProductPage" extends="bookstore.definition">
+		<put-attribute name="title" value="Add Product" />
+		<put-attribute name="body" value="/WEB-INF/views/add-product.jsp" />
+	</definition>
 	
 </tiles-definitions>

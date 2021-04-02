@@ -2,17 +2,16 @@ package com.bookstore.dto;
 
 import java.math.BigDecimal;
 
-import com.bookstore.entity.CategoryEntity;
-
 public class ProductDTO {
 	private Long id;
 	private String name;
 	private BigDecimal sallingPrice;
 	private BigDecimal originalPrice;
 	private String imageUrl;
-	private String category;
-	private String language;
+	private Long categoryId;
+	private Long languageId;
 	private String summary;
+	private Boolean isBestSeller;
 
 	public Long getId() {
 		return id;
@@ -54,22 +53,6 @@ public class ProductDTO {
 		this.imageUrl = imageUrl;
 	}
 
-	public String getCategory() {
-		return category;
-	}
-
-	public void setCategory(String category) {
-		this.category = category;
-	}
-
-	public String getLanguage() {
-		return language;
-	}
-
-	public void setLanguage(String language) {
-		this.language = language;
-	}
-
 	public String getSummary() {
 		return summary;
 	}
@@ -78,4 +61,27 @@ public class ProductDTO {
 		this.summary = summary;
 	}
 
+	public Boolean getBestSeller() {
+		return isBestSeller;
+	}
+
+	public void setBestSeller(Boolean bestSeller) {
+		isBestSeller = bestSeller;
+	}
+
+	public Long getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(Long categoryId) {
+		this.categoryId = categoryId;
+	}
+
+	public Long getLanguageId() {
+		return languageId;
+	}
+
+	public void setLanguageId(Long languageId) {
+		this.languageId = languageId;
+	}
 }

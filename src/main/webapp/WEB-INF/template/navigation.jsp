@@ -1,30 +1,18 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ page isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="navigation">
     <div class="block-information">
         <h4>BEST SELLER</h4>
         <ul>
-            <li><a href="#">
-                <span><img alt="Product" src="<c:url value="/static/asset/book.jpg" />"></span></a>
-                <span>Java Programming</span>
-            </li>
-            <li>
-                <span><img alt="Product" src="<c:url value="/static/asset/book.jpg" />"></span></a>
-                <span>C# Programming</span>
-            </li>
-            <li>
-                <span><img alt="Product" src="<c:url value="/static/asset/book.jpg" />"></span></a>
-                <span>Database</span>
-            </li>
-            <li>
-                <span><img alt="Product" src="<c:url value="/static/asset/book.jpg" />"></span></a>
-                <span>HTM, CSS & JavaScript</span>
-            </li>
-            <li>
-                <span><img alt="Product" src="<c:url value="/static/asset/book.jpg" />"></span></a>
-                <span>Algothirm</span>
-            </li>
-        </ul>
+            <c:forEach items="${commonData.bestSellerProducts}" var="product">
+                <li>
+                    <span><img src="${product.imageUrl}"/></span>
+
+                    <a href="product/<c:out value="${product.id}"></c:out>"><c:out value="${product.name}"></c:out></a>
+                </li>
+            </c:forEach>
+            </ul>
     </div>
     <div class="block-information">
         <h4>FILTER</h4>

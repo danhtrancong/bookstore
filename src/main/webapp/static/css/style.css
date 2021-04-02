@@ -127,14 +127,20 @@ body {
 }
 /*NAVIGATION*/
 .navigation .block-information ul{
+
     list-style-type: none;
     padding: 0px;
+
 }
 .navigation .block-information ul li {
     height: 50px;
     padding-top: 10px;
     padding-left: 20px;
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 .navigation .block-information ul li a{
     color: gray;
@@ -187,6 +193,7 @@ body {
 .products .product img{
     width: 100%;
     cursor: pointer;
+    height: 200px;
 }
 .products .product h3, i{
     margin: 5px;
@@ -200,7 +207,7 @@ body {
     padding-left: 10px;
 }
 .products ul li {
-    width: 23%;
+    width: 22%;
     float: left;
     margin-right: 15px;
     height: 325px;
@@ -208,6 +215,21 @@ body {
 .product:hover{
     border: 1px solid #AAAAAA;
 }
+/* ADD-PRODUCT */
+
+.product-detail{
+    margin-top: 30px;
+}
+.product-detail img{
+    height: 350px;
+}
+.product-detail div{
+    margin-bottom: 10px;
+}
+.add-product-detail{
+    margin-top: 10px;
+}
+
 /* LOGIN */
 .login{
     background: url(../static/asset/login-background.jpg);

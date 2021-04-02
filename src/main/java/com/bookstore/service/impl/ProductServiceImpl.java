@@ -4,12 +4,12 @@ import com.bookstore.dao.CategoryDao;
 import com.bookstore.dao.LanguageDao;
 import com.bookstore.dao.ProductDao;
 import com.bookstore.dto.CategoryDTO;
-import com.bookstore.dto.LanguageDTO;
 import com.bookstore.dto.ProductDTO;
 import com.bookstore.dto.ProductsInfoDTO;
 import com.bookstore.entity.CategoryEntity;
 import com.bookstore.entity.LanguageEntity;
 import com.bookstore.entity.ProductEntity;
+import com.bookstore.mapper.CategoryMapper;
 import com.bookstore.mapper.ProductMapper;
 import com.bookstore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,8 +31,8 @@ public class ProductServiceImpl implements ProductService {
     private ProductDao productDao;
 
     @Override
-    public List<ProductDTO> getAll() {
-        return null;
+    public List<ProductEntity> getAll() {
+        return productDao.getProducts();
     }
 
     @Override
@@ -52,19 +52,28 @@ public class ProductServiceImpl implements ProductService {
 //		List<CategoryDTO> categoriesDTO = categories.stream()
 //				.map(categoryEntity -> ProductMapper.mapFromEntity(categoryEntity)).collect(Collectors.toList());
 
-        List<CategoryDTO> categoriesDTO = categories.stream().map(ProductMapper::mapFromEntity)
+        List<CategoryDTO> categoriesDTO = categories.stream().map(CategoryMapper::mapFromEntity)
                 .collect(Collectors.toList());
 
-        List<LanguageDTO> languagesDTO = languages.stream().map(ProductMapper::mapFromEntity)
-                .collect(Collectors.toList());
+//        List<LanguageDTO> languagesDTO = languages.stream().map(ProductMapper::mapFromEntity)
+//                .collect(Collectors.toList());
 
         List<ProductDTO> products = productsEntity.stream().map(ProductMapper::mapFromEntity)
                 .collect(Collectors.toList());
 
         productDTO.getCategories().addAll(categoriesDTO);
-        productDTO.getLanguages().addAll(languagesDTO);
+//      productDTO.getLanguages().addAll(languagesDTO);
         productDTO.getProducts().addAll(products);
         return productDTO;
+    }
+
+    @Override
+    public ProductEntity saveProduct(ProductEntity productEntity, Long categoryId, Long languageId) {
+        CategoryEntity categoryEntity = categoryDao.getCategoryById(categoryId);
+        LanguageEntity languageEntity = languageDao.getLanguagesById(languageId);
+        productEntity.setCategory(categoryEntity);
+        productEntity.setLanguage(languageEntity);
+        return productDao.save(productEntity);
     }
 
     @Override
@@ -75,7 +84,6 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<ProductEntity> getBestSellers() {
-        return null;
+        return productDao.getBestSellers();
     }
-
 }

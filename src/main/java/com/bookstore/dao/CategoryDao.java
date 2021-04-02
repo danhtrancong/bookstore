@@ -9,4 +9,6 @@ public interface CategoryDao {
 	List<CategoryEntity> getAll();
 
 	CategoryEntity getCategoryById(long categoryId);
+
+	CategoryEntity getCategoryByName(String categoryName);
 }
